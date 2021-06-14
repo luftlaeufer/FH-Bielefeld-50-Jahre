@@ -123,6 +123,7 @@
                         aperiam necessitatibus, reiciendis eligendi tenetur ut!</p>
                     <!--                     <div class="sketch" id="sketch2"></div> -->
                     <img class="openSketch" data-id="sketch3" src="./assets/sketch3.jpg" alt="">
+                    <img class="openSketch" data-id="sketch4" src="./assets/sketch3.jpg" alt="">
                 </article>
 
                 <article>
@@ -264,6 +265,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    @media (max-width: 850px) {
+        .modal__left {
+            display: none;
+        }
+
+        .modal__right {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .blur {

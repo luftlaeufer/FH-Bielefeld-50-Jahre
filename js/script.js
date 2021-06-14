@@ -1,12 +1,13 @@
 import sketch1 from './sketch1.js'
 import sketch2 from './sketch2.js'
 import sketch3 from './sketch3.js'
+import sketch4 from './sketch4.js'
 
 /* sketch objects have to be in an array, which is accessed later when modal is opened */
-let sketches = [sketch1, sketch2, sketch3];
+let sketches = [sketch1, sketch2, sketch3, sketch4];
 
 window.onload = () => {
-
+    
     const openSketch = document.querySelectorAll('.openSketch');
 
     popUpImages(openSketch);

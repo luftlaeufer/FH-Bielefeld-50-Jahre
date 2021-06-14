@@ -17,7 +17,6 @@ const s3 = p => {
         let touched = e.touches[0].clientY;
         rotation += p.map(touched,0,window.innerHeight,-5,5);
         return false;
-
       }
     
       p.setup = function () {

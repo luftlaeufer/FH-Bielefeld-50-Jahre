@@ -1,14 +1,25 @@
 const sketch1 = (p) => {
 
-  let amount = 20;
+  let amount = 50;
   let positions = [];
   let dimensions = [];
+  let rotations = [];
   let colors = [];
   let p5font;
   p.destroySketch = false;
+
+function setCanvas() {
+    /* set canvas dimensions according to 19,5 : 9 ==> iPhone11 ration */
+    let wh = window.innerHeight;
+    let ww = wh / 2.166666;
+    return {
+      x: ww,
+      y: wh
+    }
+  }
   
   p.windowResized = function () {
-    p.resizeCanvas(window.innerWidth / 2 - 50, window.innerHeight * 0.75);
+    p.resizeCanvas(setCanvas().x, setCanvas().y);
   };
 
   p.preload = function() {
@@ -16,13 +27,17 @@ const sketch1 = (p) => {
   }
 
   p.setup = function () {
-    p.createCanvas(window.innerWidth / 2 - 50, window.innerHeight * 0.75);
+
+    p.createCanvas(setCanvas().x, setCanvas().y);
+
     p.colorMode("HSB");
     p.textFont(p5font);
+    p.rectMode(this.CENTER);
     p.textSize(32);
      for (let i = 0; i < amount; i++) {
-        positions[i] = p.createVector(p.random(p.width), p.random(p.height));
-        dimensions[i] = p.random(10,100);
+        positions[i] = p.createVector(p.random(-p.width/2, p.width/2), p.random(-p.height/2, p.height/2));
+        dimensions[i] = p.random(4,100);
+        rotations[i] = p.random(-360,360);
         let noiseColor = p.map(p.noise(i), 0, 1, 0, 255);
         colors[i] = noiseColor;
     }
@@ -35,78 +50,76 @@ const sketch1 = (p) => {
           console.log('destroyed')
       }
 
-        p.background(255);
-            for (let i = 0; i< dimensions.length; i++) {
-                p.fill(colors[i],p.frameCount % 255,colors[i]);
+      p.background(255);
+      p.translate(p.width/2, p.height/2);
+        for (let i = 0; i< dimensions.length; i++) {
+        p.fill(20,100);
+        p.stroke(colors[i],p.frameCount % 255,colors[i]);
 
-                p.ellipse(positions[i].x, positions[i].y, dimensions[i], dimensions[i]);
+        dimensions[i] = p.constrain(dimensions[i], 4, p.width * 2);
+        p.push();
+        p.translate(positions[i].x, positions[i].y);
+        p.rotate(p.radians(rotations[i] + dimensions[i] / 10));
+        p.rect(0,0, dimensions[i], dimensions[i]);
+        p.pop();
       }
 
       p.fill(20);
-      p.text('graphics', 40, 60);
+      p.text('complexity', -p.width/2 + 34, -p.height/2 + 64);
        
   };
 
-//   p.mousePressed = function() {
-//       p.remove();
-//   }
+  p.mouseWheel = function(e) {
+    for (let i = 0; i < dimensions.length; i++) {
+      dimensions[i] += p.map(e.delta,-50,50,-5,5);
+    }
+    return false;
+  }
 
-  // window.onscroll = (e) => {
-
-  //   //console.log(e)
-  //   for (let i = 0; i< dimensions.length; i++) {
-  //       dimensions[i] += scrollY * 0.01;
+  // p.touchMoved = function(e) {
+  //   console.log(e);
+  //   let touched = e.touches[0].clientY;
+  //   for (let i = 0; i < dimensions.length; i++) {
+  //     dimensions[i] += p.map(touched,0,window.innerHeight,-5,5);
   //   }
+  //   return false;
   // }
 
-/*   p.mousePressed = function() {
-    p.remove();
-  } */
+
+  // p.mouseWheel = function(event) {
+  //   //move the square according to the vertical scroll amount
+  //   console.log(event)
+
+  //   for (let i = 0; i< dimensions.length; i++) {
+  //       if (dimensions[i] >= 0 && dimensions[i] <= 200) {
+  //           dimensions[i] = p.min(dimensions[i] + event.delta * 0.5, 200);
+  //       }
+  //       else if (dimensions[i] == 0) {
+  //         return;
+  //       }
+  //       else {
+  //           dimensions[i] -= event.delta * 0.5;
+  //       }
+  //   }
 
 
-  p.mouseWheel = function(event) {
-    //move the square according to the vertical scroll amount
-    console.log(event)
-
-    for (let i = 0; i< dimensions.length; i++) {
-        if (dimensions[i] >= 0 && dimensions[i] <= 200) {
-            dimensions[i] = p.min(dimensions[i] + event.delta * 0.5, 200);
-        }
-        else if (dimensions[i] == 0) {
-          return;
-        }
-        else {
-            dimensions[i] -= event.delta * 0.5;
-        }
-    }
-
-    //uncomment to block page scrolling
-  //   if (event.delta >= 13) {
-  //     return true;
-  //   } else
-     
-     //return false;
    }
 
-  p.touchMoved = function(event) {
-    //move the square according to the vertical scroll amount
-    console.log(event.touches[0].pageY)
-
-    let touch = event.touches[0].pageY;
-    let mappedTouch = p.map(touch,0,window.innerHeight,-10,10);
+  // p.touchMoved = function(event) {
+  //   //move the square according to the vertical scroll amount
+  //   console.log(event.touches[0].pageY)
 
 
-    for (let i = 0; i< dimensions.length; i++) {
-        if (dimensions[i] >= 0 && dimensions[i] <= 200) {
-            dimensions[i] += mappedTouch;
-        }
-        else {
-            dimensions[i] -= mappedTouch;
-        }
-    }
+  //   for (let i = 0; i< dimensions.length; i++) {
+  //       if (dimensions[i] >= 0 && dimensions[i] <= 200) {
+  //           dimensions[i] = mappedTouch;
+  //       }
+  //       else {
+  //           dimensions[i] = mappedTouch;
+  //       }
+  //   }
      
-     //return false;
-   }
-};
+  //    //return false;
+  //  }
 
 export default sketch1;
