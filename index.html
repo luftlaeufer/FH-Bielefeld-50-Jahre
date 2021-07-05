@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Canvas</title>
+    <title>50 Jahre Zukunft</title>
+
+    <!-- p5.min.js könnte man auch mit einem CDN einbinden, hauptsache es wird geladen -->
     <script src="./js/p5.min.js"></script>
 </head>
 
 <body>
 
+
     <div class="page">
 
+        <!-- leftSide wird später in JS geblurred, wenn das modal geöffnet wird -->
         <div class="leftSide">
             <h1>VERGANGENHEIT</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed praesentium, fugit dolores porro reprehenderit facere quia esse rem nihil? Quae tempore cum numquam odit rerum rem dolore
@@ -97,6 +101,7 @@
 
         </div>
 
+        <!-- rightSide wird später in JS geblurred, wenn das modal geöffnet wird -->
         <div class="rightSide">
             <div class="sketches">
 
@@ -109,21 +114,15 @@
                         illo qui magni soluta dolorem quod odit, quaerat quia quam labore eveniet temporibus beatae quo repellendus dolores vitae consequuntur sequi earum aliquid sunt. Nesciunt
                         delectus cumque dicta, voluptatum nostrum enim tenetur error repellendus maxime iusto molestias ut odit dolores molestiae quibusdam, ad aperiam doloribus at ea. Ex minima ipsum
                         aperiam necessitatibus, reiciendis eligendi tenetur ut!</p>
-                    <!-- <div class="sketch" id="sketch1"></div> -->
-                    <img class="openSketch" data-id="sketch1" src="./assets/sketch1.jpg" alt="">
-                    <img class="openSketch" data-id="sketch2" src="./assets/sketch2.jpg" alt="">
+                    <img class="previewSketchImage" data-id="sketch1" src="./assets/sketch1.jpg" alt="">
+
                 </article>
 
                 <article>
                     <h1>Sketch 2</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rerum repellendus atque, distinctio quae nostrum tempore recusandae exercitationem fugit consequatur voluptate
-                        expedita doloremque fuga. Molestias distinctio nihil, dicta commodi illum eveniet aperiam sed illo blanditiis officiis. Dignissimos nulla, tenetur enim illum nemo iste. In a
-                        illo qui magni soluta dolorem quod odit, quaerat quia quam labore eveniet temporibus beatae quo repellendus dolores vitae consequuntur sequi earum aliquid sunt. Nesciunt
-                        delectus cumque dicta, voluptatum nostrum enim tenetur error repellendus maxime iusto molestias ut odit dolores molestiae quibusdam, ad aperiam doloribus at ea. Ex minima ipsum
-                        aperiam necessitatibus, reiciendis eligendi tenetur ut!</p>
-                    <!--                     <div class="sketch" id="sketch2"></div> -->
-                    <img class="openSketch" data-id="sketch3" src="./assets/sketch3.jpg" alt="">
-                    <img class="openSketch" data-id="sketch4" src="./assets/sketch3.jpg" alt="">
+                        expedita doloremque fuga. </p>
+                    <img class="previewSketchImage" data-id="sketch2" src="./assets/sketch2.jpg" alt="">
                 </article>
 
                 <article>
@@ -133,12 +132,23 @@
                         illo qui magni soluta dolorem quod odit, quaerat quia quam labore eveniet temporibus beatae quo repellendus dolores vitae consequuntur sequi earum aliquid sunt. Nesciunt
                         delectus cumque dicta, voluptatum nostrum enim tenetur error repellendus maxime iusto molestias ut odit dolores molestiae quibusdam, ad aperiam doloribus at ea. Ex minima ipsum
                         aperiam necessitatibus, reiciendis eligendi tenetur ut!</p>
-                    <!--                     <div class="sketch" id="sketch3"></div> -->
+                    <img class="previewSketchImage" data-id="sketch3" src="./assets/sketch3.jpg" alt="">
+                </article>
+
+                <article>
+                    <h1>Sketch 4</h1>
+                    <p>Molestias distinctio nihil, dicta commodi illum eveniet aperiam sed illo blanditiis officiis. Dignissimos nulla, tenetur enim illum nemo iste. In a
+                        illo qui magni soluta dolorem quod odit, quaerat quia quam labore eveniet temporibus beatae ad aperiam doloribus at ea. Ex minima ipsum
+                        aperiam necessitatibus, reiciendis eligendi tenetur ut!</p>
+                    <img class="previewSketchImage" data-id="sketch4" src="./assets/sketch4.jpg" alt="">
                 </article>
             </div>
         </div>
     </div>
 
+
+
+    <!-- Hier ist das Modal -->
     <section class="modal">
 
         <div class="modal__close">
@@ -149,14 +159,14 @@
             </svg>
         </div>
 
-        <!-- empty -->
+
         <div class="modal__left">
-            <article class="modal__projectText">
+            <div class="modal__projectText">
                 <h2>Projekt Titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quidem? Voluptatum fuga nesciunt magni consectetur odio, sequi aliquam. Deleniti similique illo commodi ratione ipsa
                     aut
                 </p>
-            </article>
+            </div>
         </div>
         <div class="modal__right">
             <!-- ID wird durch JS dynamisch gefüllt -->
@@ -171,6 +181,10 @@
 </html>
 
 <style>
+    /*  *************************************************** */
+    /* Basic Styling, aber das wirst du eh alles überschreiben. Unten wird's eher interessant… */
+    /*  *************************************************** */
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -217,87 +231,6 @@
         overflow: auto;
     }
 
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .modal__open {
-        z-index: 10;
-        display: flex;
-    }
-
-    .modal__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 42px;
-        cursor: pointer;
-        transition: transform 0.25s ease-out;
-    }
-
-    .modal__close:hover {
-        transform: rotate(90deg);
-    }
-
-    .modal__left {
-        width: 50%;
-        height: 100%;
-        opacity: 0.8;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-    }
-
-    .modal__projectText {
-        padding-right: 40px;
-        width: 40%;
-    }
-
-    .modal__right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    @media (max-width: 850px) {
-        .modal__left {
-            display: none;
-        }
-
-        .modal__right {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .blur {
-        filter: blur(8px);
-        opacity: 0.5;
-    }
-
-    .openSketch {
-        display: inline-block;
-        width: 49%;
-        height: auto;
-        cursor: pointer;
-        transition: opacity 2s ease-in-out, transform 0.2s ease-out;
-        padding-right: 20px;
-        object-fit: cover;
-        height: 600px;
-    }
-
-    .openSketch:hover {
-        transform: translateY(-4px);
-    }
-
     h1 {
         font-size: 3rem;
     }
@@ -319,7 +252,93 @@
         margin-bottom: 100px;
     }
 
+
+    /*  ***************************************************************** */
+    /* Eigentlich passiert ab hier das interessante Styling für das Modal */
+    /*  ***************************************************************** */
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* diese Klasse wird dem Modal hinzugefügt, wenn man auf die Vorschaubilder klickt */
+    .modal__open {
+        z-index: 10;
+        display: flex;
+    }
+
+    /* X-Button zum Schließen */
+    .modal__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 42px;
+        cursor: pointer;
+        transition: transform 0.25s ease-out;
+    }
+
+    .modal__close:hover {
+        transform: rotate(90deg);
+    }
+
+    /* Linke Seite vom Modal */
+    .modal__left {
+        flex: 1;
+        height: 100%;
+        opacity: 0.8;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .modal__projectText {
+        padding-right: 40px;
+        width: 40%;
+    }
+
+    /* Rechte Seite vom Modal. Hier steckt der p5-Sketch drin */
+    .modal__right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Diese Klasse wird beim Öffnen des Modals auf die linke Seite des Modals durch JS gepackt und beim Schließen removed  */
+    .blur {
+        filter: blur(8px);
+        opacity: 0.5;
+    }
+
     canvas {
         display: block;
+        padding: 20px;
+    }
+
+    .sketchContainer {}
+
+
+    /* Das ist die Klasse, die die Vorschaubilder der Sketche auf der rechten Seite haben */
+    .previewSketchImage {
+        display: inline-block;
+        width: 49%;
+        height: auto;
+        cursor: pointer;
+        transition: opacity 2s ease-in-out, transform 0.2s ease-out;
+        padding-right: 20px;
+        object-fit: cover;
+        height: 600px;
+    }
+
+    .previewSketchImage:hover {
+        transform: translateY(-4px);
     }
 </style>

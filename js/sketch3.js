@@ -21,8 +21,6 @@ const s3 = p => {
     
       p.setup = function () {
         p.createCanvas(window.innerWidth / 2 - 50, window.innerHeight * 0.75);
-        p.colorMode('HSB');
-        p.rectMode('CENTER');
         p.background(240);
       }
     
