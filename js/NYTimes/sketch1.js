@@ -49,8 +49,6 @@ const sketch1 = (p) => {
     // Set a random noise seed so that every animation is truly unique
     p.noiseSeed((p.round(p.random(0, 10000))));
 
-
-
   };
 
   p.preload = function () {
@@ -129,11 +127,11 @@ const sketch1 = (p) => {
 
 
     // Apply the filter pass at/after 60% progress
-    /*     if (progress >= 60) {
-          blur.setUniform("blurSize", p.round(p.map(progress, 60, 100, 10, 1000)));
-          blur.setUniform("sigma", p.map(progress, 60, 100, 5, 100));
-          p.shader(blur);
-        } */
+    if (progress >= 60) {
+      blur.setUniform("blurSize", p.round(p.map(progress, 60, 100, 10, 1000)));
+      blur.setUniform("sigma", p.map(progress, 60, 100, 5, 100));
+      p.shader(blur);
+    }
 
     drawText();
     drawProgress();
