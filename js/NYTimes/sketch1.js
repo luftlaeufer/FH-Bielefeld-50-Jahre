@@ -27,7 +27,7 @@ const sketch1 = (p) => {
   }
 
   p.windowResized = function () {
-    p.resizeCanvas(setCanvas().x, setCanvas().y);
+    p.resizeCanvas(setCanvas().x, setCanvas().y, p.WEBGL);
   };
 
   p.setup = function () {
@@ -123,8 +123,8 @@ const sketch1 = (p) => {
       console.log('destroyed')
     }
 
-    p.translate(-p.width / 2, -p.height / 2);
     p.background('#141414');
+    p.translate(-p.width / 2, -p.height / 2);
     drawGrid();
 
 
