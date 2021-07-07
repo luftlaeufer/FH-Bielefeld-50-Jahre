@@ -27,7 +27,7 @@ const sketch1 = (p) => {
   }
 
   p.windowResized = function () {
-    p.resizeCanvas(setCanvas().x, setCanvas().y, p.WEBGL);
+    p.resizeCanvas(setCanvas().x, setCanvas().y, this.WEBGL);
   };
 
   p.setup = function () {
@@ -35,9 +35,9 @@ const sketch1 = (p) => {
     // Load the JSON file and store nested content in array
     loadAndParseJSONData();
 
-    p.createCanvas(setCanvas().x, setCanvas().y, p.WEBGL);
-    p.smooth(8);
-    p.frameRate(60);
+    p.createCanvas(setCanvas().x, setCanvas().y, this.WEBGL);
+    //p.smooth(8);
+    //p.frameRate(60);
 
     // Set internal variables
     sketchHeight = p.height * 0.8;
@@ -57,9 +57,9 @@ const sketch1 = (p) => {
     blur = p.loadShader("../../assets/shader/blur.vert", "../../assets/shader/blur.frag");
 
     // Load fonts
-    boldFont = p.loadFont("../../assets/fonts/MaximaNowTBPro-Medium.otf");
+    boldFont = p.loadFont("../../assets/fonts/MaximaNowTBProMedium.otf");
     italicFont = p.loadFont("../../assets/fonts/MaximaNowTBProRegularItalic.otf");
-    regularFont = p.loadFont("../../assets/fonts/MaximaNowTBPro-Regular.otf");
+    regularFont = p.loadFont("../../assets/fonts/MaximaNowTBProRegular.otf");
 
     // Load the arrow vector file and set drawing styles
     arrow = p.loadImage("../../assets/images/arrow.png");
@@ -81,6 +81,7 @@ const sketch1 = (p) => {
         //console.log(data);
 
         let years = data.length;
+
         let dataPointsPerYear = data[0].content.length; //let dataPointsPerYear = data.getJSONObject(0).getJSONArray("content").size();
 
         //changeData = new Array(years).fill(new Array(dataPointsPerYear));
@@ -166,6 +167,7 @@ const sketch1 = (p) => {
     // Determine how many elements we actually want to draw (this is used to hide elements from the grid as we scroll)
     let elementsToDraw = p.round(years - p.pow(1, gridSize) - 1);
 
+
     // Determine the grid size by calculating the square root of the desired amount of years (so as to get a number we can draw as a grid)
     gridSize = p.round(p.sqrt(years));
     // Determine the pixel dimensions of the grid
@@ -210,7 +212,6 @@ const sketch1 = (p) => {
             rotation += p.noise(p.frameCount * 0.002) * p.map(progress, 90, 100, 1, 200);
           }
         }
-
 
         // Set position at center of grid-block
         position.x -= gSize.x / 2;
@@ -289,7 +290,7 @@ const sketch1 = (p) => {
     let ticks = 101;
     let tickSeparation = (p.width - p.width * 0.14) / ticks;
     p.strokeWeight(1);
-    p.noFill();
+    //p.noFill();
     p.stroke(128);
     for (let i = 0; i < ticks; i++) {
       let tickHeight = p.height * 0.995;
@@ -302,7 +303,7 @@ const sketch1 = (p) => {
 
   // Draw the vertical progress bar
   function drawProgress() {
-    p.noFill();
+    //p.noFill();
     p.stroke(255);
     p.strokeWeight(6);
     let lineWidth;
