@@ -1,7 +1,7 @@
 
 /* Die Sketche werden jeweils als Module exportiert, damit sie hier im Script als globale Variablen abrufbar sind */
 
-import sketch1 from './sketch1.js'
+import sketch1 from './NYTimes/sketch1.js'
 import sketch2 from './sketch2.js'
 import sketch3 from './sketch3.js'
 import sketch4 from './sketch4.js'
@@ -53,7 +53,7 @@ function openModal(images) {
             /* connect sketch with DIV and invoke p5 sketch */
             sketchContainer.id = sketchID;
             sketch = new p5(sketches[index], sketchID); // invoke p5
-            
+
             /* close modal */
             modal.addEventListener('click', () => {
                 modal.classList.remove('modal__open');

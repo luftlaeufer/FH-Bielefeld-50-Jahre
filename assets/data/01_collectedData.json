@@ -1,0 +1,2756 @@
+[
+    {
+        "year": 1971,
+        "count": 8724,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 90,
+                "mentions_normalized": 0.01,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 177,
+                "mentions_normalized": 0.02,
+                "change": 0
+            },
+            {
+                "query": "Art",
+                "mentions_total": 111,
+                "mentions_normalized": 0.013,
+                "change": 0
+            },
+            {
+                "query": "Design",
+                "mentions_total": 4,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 11,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 1,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 25,
+                "mentions_normalized": 0.003,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1972,
+        "count": 8135,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 86,
+                "mentions_normalized": 0.011,
+                "change": 10
+            },
+            {
+                "query": "Education",
+                "mentions_total": 202,
+                "mentions_normalized": 0.025,
+                "change": 25
+            },
+            {
+                "query": "Art",
+                "mentions_total": 139,
+                "mentions_normalized": 0.017,
+                "change": 30.77
+            },
+            {
+                "query": "Design",
+                "mentions_total": 2,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 8,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 19,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            }
+        ]
+    },
+    {
+        "year": 1973,
+        "count": 8111,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 51,
+                "mentions_normalized": 0.006,
+                "change": -45.45
+            },
+            {
+                "query": "Education",
+                "mentions_total": 228,
+                "mentions_normalized": 0.028,
+                "change": 12
+            },
+            {
+                "query": "Art",
+                "mentions_total": 103,
+                "mentions_normalized": 0.013,
+                "change": -23.53
+            },
+            {
+                "query": "Design",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1974,
+        "count": 7236,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 32,
+                "mentions_normalized": 0.004,
+                "change": -33.33
+            },
+            {
+                "query": "Education",
+                "mentions_total": 177,
+                "mentions_normalized": 0.024,
+                "change": -14.29
+            },
+            {
+                "query": "Art",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": -92.31
+            },
+            {
+                "query": "Design",
+                "mentions_total": 4,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "History",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": -50
+            }
+        ]
+    },
+    {
+        "year": 1975,
+        "count": 7762,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 41,
+                "mentions_normalized": 0.005,
+                "change": 25
+            },
+            {
+                "query": "Education",
+                "mentions_total": 225,
+                "mentions_normalized": 0.029,
+                "change": 20.83
+            },
+            {
+                "query": "Art",
+                "mentions_total": 62,
+                "mentions_normalized": 0.008,
+                "change": 700
+            },
+            {
+                "query": "Design",
+                "mentions_total": 3,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "History",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 14,
+                "mentions_normalized": 0.002,
+                "change": 100
+            }
+        ]
+    },
+    {
+        "year": 1976,
+        "count": 5968,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 48,
+                "mentions_normalized": 0.008,
+                "change": 60
+            },
+            {
+                "query": "Education",
+                "mentions_total": 185,
+                "mentions_normalized": 0.031,
+                "change": 6.9
+            },
+            {
+                "query": "Art",
+                "mentions_total": 48,
+                "mentions_normalized": 0.008,
+                "change": 0
+            },
+            {
+                "query": "Design",
+                "mentions_total": 1,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 10,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 10,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1977,
+        "count": 7212,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 55,
+                "mentions_normalized": 0.008,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 178,
+                "mentions_normalized": 0.025,
+                "change": -19.35
+            },
+            {
+                "query": "Art",
+                "mentions_total": 64,
+                "mentions_normalized": 0.009,
+                "change": 12.5
+            },
+            {
+                "query": "Design",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 4,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Society",
+                "mentions_total": 4,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1978,
+        "count": 7267,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 37,
+                "mentions_normalized": 0.005,
+                "change": -37.5
+            },
+            {
+                "query": "Education",
+                "mentions_total": 245,
+                "mentions_normalized": 0.034,
+                "change": 36
+            },
+            {
+                "query": "Art",
+                "mentions_total": 104,
+                "mentions_normalized": 0.014,
+                "change": 55.56
+            },
+            {
+                "query": "Design",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": -50
+            }
+        ]
+    },
+    {
+        "year": 1979,
+        "count": 6560,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 32,
+                "mentions_normalized": 0.005,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 188,
+                "mentions_normalized": 0.029,
+                "change": -14.71
+            },
+            {
+                "query": "Art",
+                "mentions_total": 87,
+                "mentions_normalized": 0.013,
+                "change": -7.14
+            },
+            {
+                "query": "Design",
+                "mentions_total": 1,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 11,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 4,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 8,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 14,
+                "mentions_normalized": 0.002,
+                "change": 100
+            }
+        ]
+    },
+    {
+        "year": 1980,
+        "count": 6791,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Education",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Art",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Design",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": -100
+            }
+        ]
+    },
+    {
+        "year": 1981,
+        "count": 7792,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 267,
+                "mentions_normalized": 0.034,
+                "change": 3.4
+            },
+            {
+                "query": "Art",
+                "mentions_total": 97,
+                "mentions_normalized": 0.012,
+                "change": 1.2
+            },
+            {
+                "query": "Design",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 45,
+                "mentions_normalized": 0.006,
+                "change": 0.6
+            },
+            {
+                "query": "Future",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Society",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 30,
+                "mentions_normalized": 0.004,
+                "change": 0.4
+            }
+        ]
+    },
+    {
+        "year": 1982,
+        "count": 8893,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 230,
+                "mentions_normalized": 0.026,
+                "change": -23.53
+            },
+            {
+                "query": "Art",
+                "mentions_total": 124,
+                "mentions_normalized": 0.014,
+                "change": 16.67
+            },
+            {
+                "query": "Design",
+                "mentions_total": 1,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 34,
+                "mentions_normalized": 0.004,
+                "change": -33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 48,
+                "mentions_normalized": 0.005,
+                "change": 25
+            }
+        ]
+    },
+    {
+        "year": 1983,
+        "count": 8203,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 0,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 232,
+                "mentions_normalized": 0.028,
+                "change": 7.69
+            },
+            {
+                "query": "Art",
+                "mentions_total": 162,
+                "mentions_normalized": 0.02,
+                "change": 42.86
+            },
+            {
+                "query": "Design",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "History",
+                "mentions_total": 43,
+                "mentions_normalized": 0.005,
+                "change": 25
+            },
+            {
+                "query": "Future",
+                "mentions_total": 19,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 4,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": -60
+            }
+        ]
+    },
+    {
+        "year": 1984,
+        "count": 9079,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 80,
+                "mentions_normalized": 0.009,
+                "change": 0.9
+            },
+            {
+                "query": "Education",
+                "mentions_total": 81,
+                "mentions_normalized": 0.009,
+                "change": -67.86
+            },
+            {
+                "query": "Art",
+                "mentions_total": 63,
+                "mentions_normalized": 0.007,
+                "change": -65
+            },
+            {
+                "query": "Design",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 4,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 13,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 14,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1985,
+        "count": 8706,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 100,
+                "mentions_normalized": 0.011,
+                "change": 22.22
+            },
+            {
+                "query": "Education",
+                "mentions_total": 124,
+                "mentions_normalized": 0.014,
+                "change": 55.56
+            },
+            {
+                "query": "Art",
+                "mentions_total": 99,
+                "mentions_normalized": 0.011,
+                "change": 57.14
+            },
+            {
+                "query": "Design",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 12,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Future",
+                "mentions_total": 13,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": 50
+            }
+        ]
+    },
+    {
+        "year": 1986,
+        "count": 9120,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 293,
+                "mentions_normalized": 0.032,
+                "change": 190.91
+            },
+            {
+                "query": "Education",
+                "mentions_total": 131,
+                "mentions_normalized": 0.014,
+                "change": 0
+            },
+            {
+                "query": "Art",
+                "mentions_total": 185,
+                "mentions_normalized": 0.02,
+                "change": 81.82
+            },
+            {
+                "query": "Design",
+                "mentions_total": 25,
+                "mentions_normalized": 0.003,
+                "change": 200
+            },
+            {
+                "query": "History",
+                "mentions_total": 29,
+                "mentions_normalized": 0.003,
+                "change": 200
+            },
+            {
+                "query": "Future",
+                "mentions_total": 18,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 28,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 33,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            }
+        ]
+    },
+    {
+        "year": 1987,
+        "count": 9138,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 221,
+                "mentions_normalized": 0.024,
+                "change": -25
+            },
+            {
+                "query": "Education",
+                "mentions_total": 137,
+                "mentions_normalized": 0.015,
+                "change": 7.14
+            },
+            {
+                "query": "Art",
+                "mentions_total": 191,
+                "mentions_normalized": 0.021,
+                "change": 5
+            },
+            {
+                "query": "Design",
+                "mentions_total": 11,
+                "mentions_normalized": 0.001,
+                "change": -66.67
+            },
+            {
+                "query": "History",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": -66.67
+            },
+            {
+                "query": "Future",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 43,
+                "mentions_normalized": 0.005,
+                "change": 25
+            }
+        ]
+    },
+    {
+        "year": 1988,
+        "count": 8962,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 213,
+                "mentions_normalized": 0.024,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 235,
+                "mentions_normalized": 0.026,
+                "change": 73.33
+            },
+            {
+                "query": "Art",
+                "mentions_total": 229,
+                "mentions_normalized": 0.026,
+                "change": 23.81
+            },
+            {
+                "query": "Design",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "History",
+                "mentions_total": 25,
+                "mentions_normalized": 0.003,
+                "change": 200
+            },
+            {
+                "query": "Future",
+                "mentions_total": 25,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 49,
+                "mentions_normalized": 0.005,
+                "change": 66.67
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 31,
+                "mentions_normalized": 0.003,
+                "change": -40
+            }
+        ]
+    },
+    {
+        "year": 1989,
+        "count": 8784,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 168,
+                "mentions_normalized": 0.019,
+                "change": -20.83
+            },
+            {
+                "query": "Education",
+                "mentions_total": 152,
+                "mentions_normalized": 0.017,
+                "change": -34.62
+            },
+            {
+                "query": "Art",
+                "mentions_total": 184,
+                "mentions_normalized": 0.021,
+                "change": -19.23
+            },
+            {
+                "query": "Design",
+                "mentions_total": 27,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "History",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 34,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Society",
+                "mentions_total": 20,
+                "mentions_normalized": 0.002,
+                "change": -60
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 25,
+                "mentions_normalized": 0.003,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1990,
+        "count": 8879,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 210,
+                "mentions_normalized": 0.024,
+                "change": 26.32
+            },
+            {
+                "query": "Education",
+                "mentions_total": 161,
+                "mentions_normalized": 0.018,
+                "change": 5.88
+            },
+            {
+                "query": "Art",
+                "mentions_total": 186,
+                "mentions_normalized": 0.021,
+                "change": 0
+            },
+            {
+                "query": "Design",
+                "mentions_total": 32,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "History",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 14,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 47,
+                "mentions_normalized": 0.005,
+                "change": 66.67
+            }
+        ]
+    },
+    {
+        "year": 1991,
+        "count": 6866,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 200,
+                "mentions_normalized": 0.029,
+                "change": 20.83
+            },
+            {
+                "query": "Education",
+                "mentions_total": 191,
+                "mentions_normalized": 0.028,
+                "change": 55.56
+            },
+            {
+                "query": "Art",
+                "mentions_total": 151,
+                "mentions_normalized": 0.022,
+                "change": 4.76
+            },
+            {
+                "query": "Design",
+                "mentions_total": 25,
+                "mentions_normalized": 0.004,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 18,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 35,
+                "mentions_normalized": 0.005,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1992,
+        "count": 7618,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 214,
+                "mentions_normalized": 0.028,
+                "change": -3.45
+            },
+            {
+                "query": "Education",
+                "mentions_total": 136,
+                "mentions_normalized": 0.018,
+                "change": -35.71
+            },
+            {
+                "query": "Art",
+                "mentions_total": 187,
+                "mentions_normalized": 0.025,
+                "change": 13.64
+            },
+            {
+                "query": "Design",
+                "mentions_total": 26,
+                "mentions_normalized": 0.003,
+                "change": -25
+            },
+            {
+                "query": "History",
+                "mentions_total": 26,
+                "mentions_normalized": 0.003,
+                "change": 200
+            },
+            {
+                "query": "Future",
+                "mentions_total": 5,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": -66.67
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 36,
+                "mentions_normalized": 0.005,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1993,
+        "count": 7340,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 196,
+                "mentions_normalized": 0.027,
+                "change": -3.57
+            },
+            {
+                "query": "Education",
+                "mentions_total": 176,
+                "mentions_normalized": 0.024,
+                "change": 33.33
+            },
+            {
+                "query": "Art",
+                "mentions_total": 218,
+                "mentions_normalized": 0.03,
+                "change": 20
+            },
+            {
+                "query": "Design",
+                "mentions_total": 24,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 13,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 11,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 36,
+                "mentions_normalized": 0.005,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 1994,
+        "count": 6856,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 151,
+                "mentions_normalized": 0.022,
+                "change": -18.52
+            },
+            {
+                "query": "Education",
+                "mentions_total": 140,
+                "mentions_normalized": 0.02,
+                "change": -16.67
+            },
+            {
+                "query": "Art",
+                "mentions_total": 160,
+                "mentions_normalized": 0.023,
+                "change": -23.33
+            },
+            {
+                "query": "Design",
+                "mentions_total": 14,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "History",
+                "mentions_total": 22,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": -60
+            }
+        ]
+    },
+    {
+        "year": 1995,
+        "count": 7038,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 213,
+                "mentions_normalized": 0.03,
+                "change": 36.36
+            },
+            {
+                "query": "Education",
+                "mentions_total": 114,
+                "mentions_normalized": 0.016,
+                "change": -20
+            },
+            {
+                "query": "Art",
+                "mentions_total": 161,
+                "mentions_normalized": 0.023,
+                "change": 0
+            },
+            {
+                "query": "Design",
+                "mentions_total": 20,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "History",
+                "mentions_total": 20,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 27,
+                "mentions_normalized": 0.004,
+                "change": 100
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 21,
+                "mentions_normalized": 0.003,
+                "change": 50
+            }
+        ]
+    },
+    {
+        "year": 1996,
+        "count": 6829,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 268,
+                "mentions_normalized": 0.039,
+                "change": 30
+            },
+            {
+                "query": "Education",
+                "mentions_total": 142,
+                "mentions_normalized": 0.021,
+                "change": 31.25
+            },
+            {
+                "query": "Art",
+                "mentions_total": 168,
+                "mentions_normalized": 0.025,
+                "change": 8.7
+            },
+            {
+                "query": "Design",
+                "mentions_total": 12,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "History",
+                "mentions_total": 11,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 25,
+                "mentions_normalized": 0.004,
+                "change": 300
+            },
+            {
+                "query": "Society",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": -25
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 27,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            }
+        ]
+    },
+    {
+        "year": 1997,
+        "count": 7282,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 181,
+                "mentions_normalized": 0.025,
+                "change": -35.9
+            },
+            {
+                "query": "Education",
+                "mentions_total": 157,
+                "mentions_normalized": 0.022,
+                "change": 4.76
+            },
+            {
+                "query": "Art",
+                "mentions_total": 146,
+                "mentions_normalized": 0.02,
+                "change": -20
+            },
+            {
+                "query": "Design",
+                "mentions_total": 34,
+                "mentions_normalized": 0.005,
+                "change": 150
+            },
+            {
+                "query": "History",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 22,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": -25
+            }
+        ]
+    },
+    {
+        "year": 1998,
+        "count": 7825,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 196,
+                "mentions_normalized": 0.025,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 176,
+                "mentions_normalized": 0.022,
+                "change": 0
+            },
+            {
+                "query": "Art",
+                "mentions_total": 219,
+                "mentions_normalized": 0.028,
+                "change": 40
+            },
+            {
+                "query": "Design",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": -40
+            },
+            {
+                "query": "History",
+                "mentions_total": 69,
+                "mentions_normalized": 0.009,
+                "change": 350
+            },
+            {
+                "query": "Future",
+                "mentions_total": 19,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 33,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 42,
+                "mentions_normalized": 0.005,
+                "change": 66.67
+            }
+        ]
+    },
+    {
+        "year": 1999,
+        "count": 8588,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 205,
+                "mentions_normalized": 0.024,
+                "change": -4
+            },
+            {
+                "query": "Education",
+                "mentions_total": 229,
+                "mentions_normalized": 0.027,
+                "change": 22.73
+            },
+            {
+                "query": "Art",
+                "mentions_total": 244,
+                "mentions_normalized": 0.028,
+                "change": 0
+            },
+            {
+                "query": "Design",
+                "mentions_total": 38,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "History",
+                "mentions_total": 37,
+                "mentions_normalized": 0.004,
+                "change": -55.56
+            },
+            {
+                "query": "Future",
+                "mentions_total": 28,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 37,
+                "mentions_normalized": 0.004,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 34,
+                "mentions_normalized": 0.004,
+                "change": -20
+            }
+        ]
+    },
+    {
+        "year": 2000,
+        "count": 8502,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 166,
+                "mentions_normalized": 0.02,
+                "change": -16.67
+            },
+            {
+                "query": "Education",
+                "mentions_total": 182,
+                "mentions_normalized": 0.021,
+                "change": -22.22
+            },
+            {
+                "query": "Art",
+                "mentions_total": 201,
+                "mentions_normalized": 0.024,
+                "change": -14.29
+            },
+            {
+                "query": "Design",
+                "mentions_total": 20,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "History",
+                "mentions_total": 37,
+                "mentions_normalized": 0.004,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 16,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Society",
+                "mentions_total": 26,
+                "mentions_normalized": 0.003,
+                "change": -25
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 24,
+                "mentions_normalized": 0.003,
+                "change": -25
+            }
+        ]
+    },
+    {
+        "year": 2001,
+        "count": 9180,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 187,
+                "mentions_normalized": 0.02,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 222,
+                "mentions_normalized": 0.024,
+                "change": 14.29
+            },
+            {
+                "query": "Art",
+                "mentions_total": 240,
+                "mentions_normalized": 0.026,
+                "change": 8.33
+            },
+            {
+                "query": "Design",
+                "mentions_total": 29,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "History",
+                "mentions_total": 21,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 21,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 35,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 2002,
+        "count": 9147,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 256,
+                "mentions_normalized": 0.028,
+                "change": 40
+            },
+            {
+                "query": "Education",
+                "mentions_total": 187,
+                "mentions_normalized": 0.02,
+                "change": -16.67
+            },
+            {
+                "query": "Art",
+                "mentions_total": 219,
+                "mentions_normalized": 0.024,
+                "change": -7.69
+            },
+            {
+                "query": "Design",
+                "mentions_total": 24,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 27,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 31,
+                "mentions_normalized": 0.003,
+                "change": -25
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 20,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            }
+        ]
+    },
+    {
+        "year": 2003,
+        "count": 9213,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 256,
+                "mentions_normalized": 0.028,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 172,
+                "mentions_normalized": 0.019,
+                "change": -5
+            },
+            {
+                "query": "Art",
+                "mentions_total": 210,
+                "mentions_normalized": 0.023,
+                "change": -4.17
+            },
+            {
+                "query": "Design",
+                "mentions_total": 12,
+                "mentions_normalized": 0.001,
+                "change": -66.67
+            },
+            {
+                "query": "History",
+                "mentions_total": 26,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 22,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 23,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 2004,
+        "count": 8810,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 219,
+                "mentions_normalized": 0.025,
+                "change": -10.71
+            },
+            {
+                "query": "Education",
+                "mentions_total": 193,
+                "mentions_normalized": 0.022,
+                "change": 15.79
+            },
+            {
+                "query": "Art",
+                "mentions_total": 198,
+                "mentions_normalized": 0.022,
+                "change": -4.35
+            },
+            {
+                "query": "Design",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": 200
+            },
+            {
+                "query": "History",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 8,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 26,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 18,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 2005,
+        "count": 10567,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 232,
+                "mentions_normalized": 0.022,
+                "change": -12
+            },
+            {
+                "query": "Education",
+                "mentions_total": 203,
+                "mentions_normalized": 0.019,
+                "change": -13.64
+            },
+            {
+                "query": "Art",
+                "mentions_total": 258,
+                "mentions_normalized": 0.024,
+                "change": 9.09
+            },
+            {
+                "query": "Design",
+                "mentions_total": 35,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 57,
+                "mentions_normalized": 0.005,
+                "change": 150
+            },
+            {
+                "query": "Future",
+                "mentions_total": 10,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 38,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 62,
+                "mentions_normalized": 0.006,
+                "change": 200
+            }
+        ]
+    },
+    {
+        "year": 2006,
+        "count": 10671,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 229,
+                "mentions_normalized": 0.021,
+                "change": -4.55
+            },
+            {
+                "query": "Education",
+                "mentions_total": 98,
+                "mentions_normalized": 0.009,
+                "change": -52.63
+            },
+            {
+                "query": "Art",
+                "mentions_total": 148,
+                "mentions_normalized": 0.014,
+                "change": -41.67
+            },
+            {
+                "query": "Design",
+                "mentions_total": 16,
+                "mentions_normalized": 0.001,
+                "change": -66.67
+            },
+            {
+                "query": "History",
+                "mentions_total": 26,
+                "mentions_normalized": 0.002,
+                "change": -60
+            },
+            {
+                "query": "Future",
+                "mentions_total": 4,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 19,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 26,
+                "mentions_normalized": 0.002,
+                "change": -66.67
+            }
+        ]
+    },
+    {
+        "year": 2007,
+        "count": 7905,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 158,
+                "mentions_normalized": 0.02,
+                "change": -4.76
+            },
+            {
+                "query": "Education",
+                "mentions_total": 100,
+                "mentions_normalized": 0.013,
+                "change": 44.44
+            },
+            {
+                "query": "Art",
+                "mentions_total": 155,
+                "mentions_normalized": 0.02,
+                "change": 42.86
+            },
+            {
+                "query": "Design",
+                "mentions_total": 6,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 32,
+                "mentions_normalized": 0.004,
+                "change": 100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 3,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 13,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 18,
+                "mentions_normalized": 0.002,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 2008,
+        "count": 9857,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 141,
+                "mentions_normalized": 0.014,
+                "change": -30
+            },
+            {
+                "query": "Education",
+                "mentions_total": 110,
+                "mentions_normalized": 0.011,
+                "change": -15.38
+            },
+            {
+                "query": "Art",
+                "mentions_total": 169,
+                "mentions_normalized": 0.017,
+                "change": -15
+            },
+            {
+                "query": "Design",
+                "mentions_total": 23,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "History",
+                "mentions_total": 19,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 1,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 13,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 35,
+                "mentions_normalized": 0.004,
+                "change": 100
+            }
+        ]
+    },
+    {
+        "year": 2009,
+        "count": 10691,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 115,
+                "mentions_normalized": 0.011,
+                "change": -21.43
+            },
+            {
+                "query": "Education",
+                "mentions_total": 86,
+                "mentions_normalized": 0.008,
+                "change": -27.27
+            },
+            {
+                "query": "Art",
+                "mentions_total": 213,
+                "mentions_normalized": 0.02,
+                "change": 17.65
+            },
+            {
+                "query": "Design",
+                "mentions_total": 32,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "History",
+                "mentions_total": 25,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 4,
+                "mentions_normalized": 0,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 16,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 58,
+                "mentions_normalized": 0.005,
+                "change": 25
+            }
+        ]
+    },
+    {
+        "year": 2010,
+        "count": 9820,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 164,
+                "mentions_normalized": 0.017,
+                "change": 54.55
+            },
+            {
+                "query": "Education",
+                "mentions_total": 99,
+                "mentions_normalized": 0.01,
+                "change": 25
+            },
+            {
+                "query": "Art",
+                "mentions_total": 176,
+                "mentions_normalized": 0.018,
+                "change": -10
+            },
+            {
+                "query": "Design",
+                "mentions_total": 25,
+                "mentions_normalized": 0.003,
+                "change": 0
+            },
+            {
+                "query": "History",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Society",
+                "mentions_total": 19,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 48,
+                "mentions_normalized": 0.005,
+                "change": 0
+            }
+        ]
+    },
+    {
+        "year": 2011,
+        "count": 8478,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 194,
+                "mentions_normalized": 0.023,
+                "change": 35.29
+            },
+            {
+                "query": "Education",
+                "mentions_total": 118,
+                "mentions_normalized": 0.014,
+                "change": 40
+            },
+            {
+                "query": "Art",
+                "mentions_total": 216,
+                "mentions_normalized": 0.025,
+                "change": 38.89
+            },
+            {
+                "query": "Design",
+                "mentions_total": 37,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "History",
+                "mentions_total": 17,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 20,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 85,
+                "mentions_normalized": 0.01,
+                "change": 100
+            }
+        ]
+    },
+    {
+        "year": 2012,
+        "count": 9168,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 316,
+                "mentions_normalized": 0.034,
+                "change": 47.83
+            },
+            {
+                "query": "Education",
+                "mentions_total": 130,
+                "mentions_normalized": 0.014,
+                "change": 0
+            },
+            {
+                "query": "Art",
+                "mentions_total": 236,
+                "mentions_normalized": 0.026,
+                "change": 4
+            },
+            {
+                "query": "Design",
+                "mentions_total": 43,
+                "mentions_normalized": 0.005,
+                "change": 25
+            },
+            {
+                "query": "History",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 30,
+                "mentions_normalized": 0.003,
+                "change": 200
+            },
+            {
+                "query": "Society",
+                "mentions_total": 30,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 98,
+                "mentions_normalized": 0.011,
+                "change": 10
+            }
+        ]
+    },
+    {
+        "year": 2013,
+        "count": 7961,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 219,
+                "mentions_normalized": 0.028,
+                "change": -17.65
+            },
+            {
+                "query": "Education",
+                "mentions_total": 141,
+                "mentions_normalized": 0.018,
+                "change": 28.57
+            },
+            {
+                "query": "Art",
+                "mentions_total": 285,
+                "mentions_normalized": 0.036,
+                "change": 38.46
+            },
+            {
+                "query": "Design",
+                "mentions_total": 51,
+                "mentions_normalized": 0.006,
+                "change": 20
+            },
+            {
+                "query": "History",
+                "mentions_total": 7,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Future",
+                "mentions_total": 4,
+                "mentions_normalized": 0.001,
+                "change": -66.67
+            },
+            {
+                "query": "Society",
+                "mentions_total": 28,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 49,
+                "mentions_normalized": 0.006,
+                "change": -45.45
+            }
+        ]
+    },
+    {
+        "year": 2014,
+        "count": 7337,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 145,
+                "mentions_normalized": 0.02,
+                "change": -28.57
+            },
+            {
+                "query": "Education",
+                "mentions_total": 103,
+                "mentions_normalized": 0.014,
+                "change": -22.22
+            },
+            {
+                "query": "Art",
+                "mentions_total": 355,
+                "mentions_normalized": 0.048,
+                "change": 33.33
+            },
+            {
+                "query": "Design",
+                "mentions_total": 53,
+                "mentions_normalized": 0.007,
+                "change": 16.67
+            },
+            {
+                "query": "History",
+                "mentions_total": 2,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Future",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 30,
+                "mentions_normalized": 0.004,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 38,
+                "mentions_normalized": 0.005,
+                "change": -16.67
+            }
+        ]
+    },
+    {
+        "year": 2015,
+        "count": 6906,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 211,
+                "mentions_normalized": 0.031,
+                "change": 55
+            },
+            {
+                "query": "Education",
+                "mentions_total": 114,
+                "mentions_normalized": 0.017,
+                "change": 21.43
+            },
+            {
+                "query": "Art",
+                "mentions_total": 302,
+                "mentions_normalized": 0.044,
+                "change": -8.33
+            },
+            {
+                "query": "Design",
+                "mentions_total": 53,
+                "mentions_normalized": 0.008,
+                "change": 14.29
+            },
+            {
+                "query": "History",
+                "mentions_total": 20,
+                "mentions_normalized": 0.003,
+                "change": 0.3
+            },
+            {
+                "query": "Future",
+                "mentions_total": 3,
+                "mentions_normalized": 0,
+                "change": -100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 34,
+                "mentions_normalized": 0.005,
+                "change": 25
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 19,
+                "mentions_normalized": 0.003,
+                "change": -40
+            }
+        ]
+    },
+    {
+        "year": 2016,
+        "count": 6265,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 150,
+                "mentions_normalized": 0.024,
+                "change": -22.58
+            },
+            {
+                "query": "Education",
+                "mentions_total": 79,
+                "mentions_normalized": 0.013,
+                "change": -23.53
+            },
+            {
+                "query": "Art",
+                "mentions_total": 352,
+                "mentions_normalized": 0.056,
+                "change": 27.27
+            },
+            {
+                "query": "Design",
+                "mentions_total": 23,
+                "mentions_normalized": 0.004,
+                "change": -50
+            },
+            {
+                "query": "History",
+                "mentions_total": 23,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 4,
+                "mentions_normalized": 0.001,
+                "change": 0.1
+            },
+            {
+                "query": "Society",
+                "mentions_total": 26,
+                "mentions_normalized": 0.004,
+                "change": -20
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 15,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            }
+        ]
+    },
+    {
+        "year": 2017,
+        "count": 5129,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 123,
+                "mentions_normalized": 0.024,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 64,
+                "mentions_normalized": 0.012,
+                "change": -7.69
+            },
+            {
+                "query": "Art",
+                "mentions_total": 219,
+                "mentions_normalized": 0.043,
+                "change": -23.21
+            },
+            {
+                "query": "Design",
+                "mentions_total": 16,
+                "mentions_normalized": 0.003,
+                "change": -25
+            },
+            {
+                "query": "History",
+                "mentions_total": 12,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 5,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 20,
+                "mentions_normalized": 0.004,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 5,
+                "mentions_normalized": 0.001,
+                "change": -50
+            }
+        ]
+    },
+    {
+        "year": 2018,
+        "count": 4757,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 115,
+                "mentions_normalized": 0.024,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 113,
+                "mentions_normalized": 0.024,
+                "change": 100
+            },
+            {
+                "query": "Art",
+                "mentions_total": 136,
+                "mentions_normalized": 0.029,
+                "change": -32.56
+            },
+            {
+                "query": "Design",
+                "mentions_total": 32,
+                "mentions_normalized": 0.007,
+                "change": 133.33
+            },
+            {
+                "query": "History",
+                "mentions_total": 14,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 5,
+                "mentions_normalized": 0.001,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 16,
+                "mentions_normalized": 0.003,
+                "change": -25
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 14,
+                "mentions_normalized": 0.003,
+                "change": 200
+            }
+        ]
+    },
+    {
+        "year": 2019,
+        "count": 4482,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 96,
+                "mentions_normalized": 0.021,
+                "change": -12.5
+            },
+            {
+                "query": "Education",
+                "mentions_total": 59,
+                "mentions_normalized": 0.013,
+                "change": -45.83
+            },
+            {
+                "query": "Art",
+                "mentions_total": 151,
+                "mentions_normalized": 0.034,
+                "change": 17.24
+            },
+            {
+                "query": "Design",
+                "mentions_total": 24,
+                "mentions_normalized": 0.005,
+                "change": -28.57
+            },
+            {
+                "query": "History",
+                "mentions_total": 11,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 9,
+                "mentions_normalized": 0.002,
+                "change": 100
+            },
+            {
+                "query": "Society",
+                "mentions_total": 20,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 16,
+                "mentions_normalized": 0.004,
+                "change": 33.33
+            }
+        ]
+    },
+    {
+        "year": 2020,
+        "count": 4480,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 96,
+                "mentions_normalized": 0.021,
+                "change": 0
+            },
+            {
+                "query": "Education",
+                "mentions_total": 49,
+                "mentions_normalized": 0.011,
+                "change": -15.38
+            },
+            {
+                "query": "Art",
+                "mentions_total": 161,
+                "mentions_normalized": 0.036,
+                "change": 5.88
+            },
+            {
+                "query": "Design",
+                "mentions_total": 37,
+                "mentions_normalized": 0.008,
+                "change": 60
+            },
+            {
+                "query": "History",
+                "mentions_total": 15,
+                "mentions_normalized": 0.003,
+                "change": 50
+            },
+            {
+                "query": "Future",
+                "mentions_total": 9,
+                "mentions_normalized": 0.002,
+                "change": 0
+            },
+            {
+                "query": "Society",
+                "mentions_total": 17,
+                "mentions_normalized": 0.004,
+                "change": 0
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 10,
+                "mentions_normalized": 0.002,
+                "change": -50
+            }
+        ]
+    },
+    {
+        "year": 2021,
+        "count": 7001,
+        "content": [
+            {
+                "query": "University",
+                "mentions_total": 84,
+                "mentions_normalized": 0.012,
+                "change": -42.86
+            },
+            {
+                "query": "Education",
+                "mentions_total": 88,
+                "mentions_normalized": 0.013,
+                "change": 18.18
+            },
+            {
+                "query": "Art",
+                "mentions_total": 147,
+                "mentions_normalized": 0.021,
+                "change": -41.67
+            },
+            {
+                "query": "Design",
+                "mentions_total": 23,
+                "mentions_normalized": 0.003,
+                "change": -62.5
+            },
+            {
+                "query": "History",
+                "mentions_total": 13,
+                "mentions_normalized": 0.002,
+                "change": -33.33
+            },
+            {
+                "query": "Future",
+                "mentions_total": 9,
+                "mentions_normalized": 0.001,
+                "change": -50
+            },
+            {
+                "query": "Society",
+                "mentions_total": 12,
+                "mentions_normalized": 0.002,
+                "change": -50
+            },
+            {
+                "query": "Technology",
+                "mentions_total": 19,
+                "mentions_normalized": 0.003,
+                "change": 50
+            }
+        ]
+    }
+]
