@@ -1,13 +1,13 @@
 
 /* Die Sketche werden jeweils als Module exportiert, damit sie hier im Script als globale Variablen abrufbar sind */
 
-import sketch1 from './NYTimes/sketch1.js'
+import sketch1 from './sketch1.js'
 import sketch2 from './sketch2.js'
-import sketch3 from './sketch3.js'
+//import sketch3 from './sketch3.js'
 import sketch4 from './sketch4.js'
 
 /* Die Sketche werden dann für die einfachere Verarbeitung in ein Array gepackt */
-let sketches = [sketch1, sketch2, sketch3, sketch4];
+let sketches = [sketch1, sketch2, sketch4];
 
 window.onload = () => {
     const sketchPreview = document.querySelectorAll('.previewSketchImage');
