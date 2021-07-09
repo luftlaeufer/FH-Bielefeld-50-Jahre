@@ -490,6 +490,7 @@ function myYear() {
   p.textAlign(p.CENTER);
   p.textFont(fReg);
   p.textSize(tSizeYear);
+  p.noStroke();
   //text(year, lineX, tSizeYear);
   //text(year, lineX, height-.93*min);
   p.text(year, lineX, 2.5*tSizeYear);
@@ -569,6 +570,19 @@ p.mouseWheel = function (event) {
     progress += aenderungDurchMaus;
   }
 }
+
+let touchSensitivty = 0.5;
+p.touchMoved = function(e) {
+ //console.log(e.touches[0].clientY);
+ let touched = e.touches[0].clientY;
+ let touchChange = p.map(touched,0,window.innerHeight,2,-2);
+
+ let aenderungDurchMaus = touchChange;
+ if (progress+aenderungDurchMaus >= 0 && progress+aenderungDurchMaus <= 100) {
+  progress += aenderungDurchMaus;
+}
+ return false;
+} 
 
 
 

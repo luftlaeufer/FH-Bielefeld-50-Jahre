@@ -339,7 +339,7 @@ const sketch4 = p => {
         let mausSensitivitaet = 0.05; // Wie sensibel reagiert das System auf die Scroll-Geste? Kleinere Werte = weniger sensibel
         p.mouseWheel = function (event) {
           let aenderungDurchMaus = event.delta * mausSensitivitaet;
-          console.log(aenderungDurchMaus);
+          //console.log(aenderungDurchMaus);
           if (fortschritt+aenderungDurchMaus >= 0 && fortschritt+aenderungDurchMaus <= 100) {
             fortschritt += aenderungDurchMaus;
           }
@@ -347,17 +347,17 @@ const sketch4 = p => {
         }
 
         let touchSensitivty = 0.5;
-         p.touchMoved = function(e) {
-          //console.log(e.touches[0].clientY);
-          let touched = e.touches[0].clientY;
-          let touchChange = p.map(touched,0,window.innerHeight,2,-2);
-
+        p.touchMoved = function(e) {
+         //console.log(e.touches[0].clientY);
+         let touched = e.touches[0].clientY;
+         let touchChange = p.map(touched,0,window.innerHeight,2,-2);
           let aenderungDurchMaus = touchChange;
-          if (fortschritt+aenderungDurchMaus >= 0 && fortschritt+aenderungDurchMaus <= 100) {
-            fortschritt += aenderungDurchMaus * touchSensitivty;
-          }
-          return false;
-        } 
+
+         if (fortschritt+aenderungDurchMaus >= 0 && fortschritt+aenderungDurchMaus <= 100) {
+          fortschritt += aenderungDurchMaus * touchSensitivty;
+        }
+         return false;
+       } 
         
 
 

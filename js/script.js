@@ -40,7 +40,7 @@ function openModal(images) {
         image.addEventListener('click', () => {
 
             // enter fullScreen
-            //toggleFullScreen(true)
+            toggleFullScreen(true)
 
             /* start with empty sketch */
             let sketch = null;
@@ -67,7 +67,7 @@ function openModal(images) {
                 sketch.destroySketch = true;
 
                 // exit fullScreen
-                //toggleFullScreen(false)
+                toggleFullScreen(false)
 
             })
         })
@@ -84,11 +84,11 @@ function toggleFullScreen(fullScreen) {
   
     const mobileBreakPoint = window.innerWidth;
 
-    if(fullScreen && mobileBreakPoint <= 500) {
-      requestFullScreen.call(docEl);
-    }
+    if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement && fullScreen && mobileBreakPoint <= 500) {
+        requestFullScreen.call(docEl);
+      }
     else {
-      cancelFullScreen.call(doc);
+    cancelFullScreen.call(doc);
     }
   }
 
