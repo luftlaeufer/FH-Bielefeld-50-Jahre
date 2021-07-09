@@ -232,6 +232,16 @@
         overflow: auto;
     }
 
+    @media(max-width:600px) {
+        .leftSide {
+            display: none;
+        }
+
+        .rightSide {
+            width: 100%;
+        }
+    }
+
     h1 {
         font-size: 3rem;
     }
@@ -327,7 +337,6 @@
 
     canvas {
         display: block;
-        padding: 20px;
     }
 
     .sketchContainer {}
@@ -341,6 +350,12 @@
         cursor: pointer;
         transition: opacity 2s ease-in-out, transform 0.2s ease-out;
         padding-right: 20px;
+    }
+
+    @media(max-width:600px) {
+        .previewSketchImage {
+            width: 100%;
+        }
     }
 
     .previewSketchImage:hover {

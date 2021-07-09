@@ -1,4 +1,4 @@
-const s2 = p => {
+const sketch2 = p => {
 
   p.destroySketch = false;
 
@@ -44,8 +44,8 @@ const s2 = p => {
 
   function setCanvas() {
     /* set canvas dimensions according to 19,5 : 9 ==> iPhone11 ration */
-    let wh = window.innerHeight;
-    let ww = wh / 2.166666;
+    let wh = 0.9 * (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
+    let ww = p.round(wh / 2.166666);
     return {
       x: ww,
       y: wh
@@ -373,4 +373,4 @@ const s2 = p => {
 
 };
 
-export default s2;
+export default sketch2;

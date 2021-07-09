@@ -3,11 +3,11 @@
 
 import sketch1 from './sketch1.js'
 import sketch2 from './sketch2.js'
-//import sketch3 from './sketch3.js'
+import sketch3 from './sketch3.js'
 import sketch4 from './sketch4.js'
 
 /* Die Sketche werden dann für die einfachere Verarbeitung in ein Array gepackt */
-let sketches = [sketch1, sketch2, sketch4];
+let sketches = [sketch1, sketch2, sketch3, sketch4];
 
 window.onload = () => {
     const sketchPreview = document.querySelectorAll('.previewSketchImage');
@@ -39,6 +39,8 @@ function openModal(images) {
     images.forEach((image, index) => {
         image.addEventListener('click', () => {
 
+            toggleFullScreen(true)
+
             /* start with empty sketch */
             let sketch = null;
             /* connect sketch div with ID from preview image */
@@ -62,12 +64,32 @@ function openModal(images) {
 
                 /* destroy sketch in p5 */
                 sketch.destroySketch = true;
+
+                // exit fullScreen
+                toggleFullScreen(false)
+
             })
         })
     })
 }
 
+// fix different 100vh on mobile for Chrome
+function toggleFullScreen(fullScreen) {
+    const doc = window.document;
+    const docEl = doc.documentElement;
+  
+    const requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+    const cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+  
+    const mobileBreakPoint = window.innerWidth;
 
+    if(fullScreen && mobileBreakPoint <= 500) {
+      requestFullScreen.call(docEl);
+    }
+    else {
+      cancelFullScreen.call(doc);
+    }
+  }
 
 
 /* Nicht notwendig, aber ein intersection observer, damit die Vorschau-Sketche einfaden, sobald sie in den Viewport kommen */

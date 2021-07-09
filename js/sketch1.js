@@ -18,8 +18,8 @@ const sketch1 = (p) => {
 
   function setCanvas() {
     /* set canvas dimensions according to 19,5 : 9 ==> iPhone11 ration */
-    let wh = window.innerHeight;
-    let ww = wh / 2.166666;
+    let wh = 0.9 * (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
+    let ww = p.round(wh / 2.166666);
     return {
       x: ww,
       y: wh
@@ -370,6 +370,19 @@ const sketch1 = (p) => {
     }
     return false;
   }
+
+  let touchSensitivty = 0.5;
+  p.touchMoved = function(e) {
+   //console.log(e.touches[0].clientY);
+   let touched = e.touches[0].clientY;
+   let touchChange = p.map(touched,0,window.innerHeight,2,-2);
+
+   let change = touchChange;
+   if (progress + change >= 0 && progress + change <= 100) {
+     progress += change * touchSensitivty;
+   }
+   return false;
+ } 
 }
 
 export default sketch1;
