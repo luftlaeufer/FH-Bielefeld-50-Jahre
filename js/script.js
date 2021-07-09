@@ -5,9 +5,10 @@ import sketch1 from './sketch1.js'
 import sketch2 from './sketch2.js'
 import sketch3 from './sketch3.js'
 import sketch4 from './sketch4.js'
+import sketch5 from './sketch5.js'
 
 /* Die Sketche werden dann für die einfachere Verarbeitung in ein Array gepackt */
-let sketches = [sketch1, sketch2, sketch3, sketch4];
+let sketches = [sketch1, sketch2, sketch3, sketch4, sketch5];
 
 window.onload = () => {
     const sketchPreview = document.querySelectorAll('.previewSketchImage');
