@@ -195,13 +195,13 @@ let abschnitt = 0;
 
     // Die Legende 
     function zeichneLegende() {
-        p.textFont(Maxima);
-        p.textSize(18);
-        let space = 27; // space zwischen den Zeilen (Blöcke wie Text in der Legende)
+        p.textFont(MaximaMedium);
+        p.textSize(p.int(p.height / 70));
+        let space = p.int(p.height / 55);; // space zwischen den Zeilen (Blöcke wie Text in der Legende)
     
         for (let i = 0; i<=4; i++) {
             p.push();
-            p.translate(40, p.height * 0.8); // um an die richtige Stelle zukommen für die Legende
+            p.translate(40, heightF + p.int(p.height * 0.13)); // um an die richtige Stelle zukommen für die Legende
             if (i == 0) {
                 p.strokeCap(p.ROUND);
                 p.noFill();
@@ -210,10 +210,10 @@ let abschnitt = 0;
                 p.line(-10, 12, 35, 12);
                 p.fill(colors[1]);
                 p.noStroke();
-                p.text(words[0], 70, 20+40*i);
+                p.text(words[0], 70, 20+(p.int(p.height/20))*i);
             }
             else if (i== 1) {
-                p.strokeWeight(25);
+                p.strokeWeight(p.height / 100);
                 p.fill(colors[i] + transP);
                 p.stroke(colors[i] + transP);
                 p.line(-5, 12+space*i, 30, 42+space*i);
@@ -221,7 +221,7 @@ let abschnitt = 0;
                 p.text(words[1], 70, 25+(space+5)*i);
             }
             else if (i == 2) {
-                p.strokeWeight(25);
+                p.strokeWeight(p.height / 100);
                 p.fill(colors[i] + transP);
                 p.stroke(colors[i] + transP);
                 p.line(-5, 12+space*i, 30, 42+space*i);
@@ -229,7 +229,7 @@ let abschnitt = 0;
                 p.text(words1[p.int(p.random(0, 2.9))], 70, 25+(space+5)*i);
             }
             else if (i == 3) {
-                p.strokeWeight(25);
+                p.strokeWeight(p.height / 100);
                 p.fill(colors[i] + transP);
                 p.stroke(colors[i] + transP);
                 p.line(-5, 12+space*i, 30, 42+space*i);
@@ -237,7 +237,7 @@ let abschnitt = 0;
                 p.text(words2[p.int(p.random(0, 2.9))], 70, 25+(space+5)*i);
             }
             else if (i == 4) {
-                p.strokeWeight(25);
+                p.strokeWeight(p.height / 100);
                 p.fill(colors[i] + transP);
                 p.stroke(colors[i] + transP);
                 p.line(-5, 12+space*i, 30, 42+space*i);
@@ -251,11 +251,11 @@ let abschnitt = 0;
         p.push();                                                            
         p.noStroke();
         p.fill(colors[1]);
-        p.translate(33, p.height * 0.8 + 10); // Um an die richtige Stelle zu kommen für die Headline
+        p.translate(40, heightF + p.int(p.height * 0.14)); // um an die richtige Stelle zukommen für die Legende        p.textFont(MaximaMedium);
+        p.textSize(p.int(p.height / 40));
         p.textFont(MaximaMedium);
-        p.textSize(24)
-        p.text("Was wir in der Zukunft", -10, -45);
-        p.text("vermissen werden:", -10, -20);
+        p.text("Was wir in der Zukunft", -10, p.int(p.height / -22));
+        p.text("vermissen werden:", -10, p.int(p.height / -50));
         p.pop();
     }
 
@@ -304,16 +304,16 @@ let abschnitt = 0;
     p.strokeCap(p.ROUND);
     let lineWidth;
     p.textFont(Maxima);
-    p.textSize(35);
+    p.textSize(p.int(p.height / 40));
     p.fill(colors[1]);
     p.strokeWeight(6);
     p.stroke(colors[5]);  
   
-    if (fortschritt <= 50) {
+    if (fortschritt <= 100) {
       lineWidth = p.map(fortschritt, 0, 50, p.width/2, p.width*0.065);
       let positionLeft = p.map(fortschritt, 0, 50, p.width*0.065, p.width/2);
       p.noStroke();
-      p.text(jahr[abschnitt], p.map(fortschritt, 0, 50, p.width*0.065, p.width/2-25), p.height-40);
+      p.text(jahr[abschnitt], p.map(fortschritt, 0, 50, p.width*0.065, p.width/2-25), p.height - p.int(p.height / 30));
       p.stroke(colors[1]);
       p.line(positionLeft, p.height*0.98, positionLeft+lineWidth-p.width*0.065, p.height*0.98);
     } else {
@@ -336,18 +336,42 @@ let abschnitt = 0;
   }
   
   
-    let touchSensitivty = 0.5;
-    p.touchMoved = function(e) {
-     //console.log(e.touches[0].clientY);
-     let touched = e.touches[0].clientY;
-     let touchChange = p.map(touched, window.innerHeight/3 ,window.innerHeight * 0.75, 2, -2);
+  //   let touchSensitivty = 0.5;
+  //   p.touchMoved = function(e) {
+  //    //console.log(e.touches[0].clientY);
+  //    let touched = e.touches[0].clientY;
+  //    let touchChange = p.map(touched, window.innerHeight/3 ,window.innerHeight * 0.75, 2, -2);
   
-     let change = touchChange;
-     if (fortschritt + change >= 0 && fortschritt + change <= 100) {
-        fortschritt += change * touchSensitivty;
-     }
-     return false;
-   } 
+  //    let change = touchChange;
+  //    if (fortschritt + change >= 0 && fortschritt + change <= 100) {
+  //       fortschritt += change * touchSensitivty;
+  //    }
+  //    return false;
+  //  } 
+
+      let touchSensitivty = 1.5;
+      let sketchContainer = document.querySelector('.sketchContainer');
+      const hammertime = new Hammer(sketchContainer);
+        hammertime.on('pan', function(ev) {
+        //console.log(ev);
+        if (fortschritt + ev.overallVelocityY >= 0 && fortschritt + ev.overallVelocityY <= 100) {
+          fortschritt += ev.overallVelocityY * touchSensitivty;
+        }
+      });
+      
+      p.touchMoved = function(e) {
+      //    //console.log(e.touches[0].clientY);
+      //   //  let touched = e.touches[0].clientX;
+      //   //  let touchChange = p.map(touched,0,window.innerWidth,2,-2);
+
+      //   //  let change = touchChange;
+      //   //  if (progress + change >= 0 && progress + change <= 100) {
+      //   //    progress += change * touchSensitivty;
+      //   //  }
+        return false;
+      }
+
+
   }
   
   export default sketch6;

@@ -345,18 +345,40 @@ const sketch4 = p => {
           return false;
         }
 
-        let touchSensitivty = 0.5;
-        p.touchMoved = function(e) {
-         //console.log(e.touches[0].clientY);
-         let touched = e.touches[0].clientY;
-         let touchChange = p.map(touched,0,window.innerHeight,2,-2);
-          let aenderungDurchMaus = touchChange;
+      //   let touchSensitivty = 0.5;
+      //   p.touchMoved = function(e) {
+      //    //console.log(e.touches[0].clientY);
+      //    let touched = e.touches[0].clientY;
+      //    let touchChange = p.map(touched,0,window.innerHeight,2,-2);
+      //     let aenderungDurchMaus = touchChange;
 
-         if (fortschritt+aenderungDurchMaus >= 0 && fortschritt+aenderungDurchMaus <= 100) {
-          fortschritt += aenderungDurchMaus * touchSensitivty;
+      //    if (fortschritt+aenderungDurchMaus >= 0 && fortschritt+aenderungDurchMaus <= 100) {
+      //     fortschritt += aenderungDurchMaus * touchSensitivty;
+      //   }
+      //    return false;
+      //  } 
+
+      let touchSensitivty = 2;
+      let sketchContainer = document.querySelector('.sketchContainer');
+      const hammertime = new Hammer(sketchContainer);
+        hammertime.on('pan', function(ev) {
+        //console.log(ev);
+        if (fortschritt + ev.overallVelocityY >= 0 && fortschritt + ev.overallVelocityY <= 100) {
+          fortschritt += ev.overallVelocityY * touchSensitivty;
         }
-         return false;
-       } 
+      });
+
+      p.touchMoved = function(e) {
+      //    //console.log(e.touches[0].clientY);
+      //   //  let touched = e.touches[0].clientX;
+      //   //  let touchChange = p.map(touched,0,window.innerWidth,2,-2);
+
+      //   //  let change = touchChange;
+      //   //  if (progress + change >= 0 && progress + change <= 100) {
+      //   //    progress += change * touchSensitivty;
+      //   //  }
+        return false;
+      }
         
 
 

@@ -42,7 +42,9 @@ function openModal(images) {
         image.addEventListener('click', () => {
 
             // enter fullScreen
-            //toggleFullScreen(true)
+/*             if (window.innerWidth <= 500) {
+                toggleFullScreen(true);
+            } */
 
             /* start with empty sketch */
             let sketch = null;
@@ -69,7 +71,9 @@ function openModal(images) {
                 sketch.destroySketch = true;
 
                 // exit fullScreen
-                //toggleFullScreen(false)
+/*                 if (window.innerWidth <= 500) {
+                    toggleFullScreen(false);
+                } */
 
             })
         })

@@ -371,18 +371,29 @@ const sketch1 = (p) => {
     return false;
   }
 
-  let touchSensitivty = 0.5;
-  p.touchMoved = function(e) {
-   //console.log(e.touches[0].clientY);
-   let touched = e.touches[0].clientY;
-   let touchChange = p.map(touched,0,window.innerHeight,2,-2);
 
-   let change = touchChange;
-   if (progress + change >= 0 && progress + change <= 100) {
-     progress += change * touchSensitivty;
-   }
-   return false;
- } 
+  let touchSensitivty = 1.5;
+  let sketchContainer = document.querySelector('.sketchContainer');
+  const hammertime = new Hammer(sketchContainer);
+    hammertime.on('pan', function(ev) {
+	  //console.log(ev);
+    if (progress + ev.overallVelocityY >= 0 && progress + ev.overallVelocityY <= 100) {
+      progress += ev.overallVelocityY * touchSensitivty;
+    }
+  });
+  
+   p.touchMoved = function(e) {
+//    //console.log(e.touches[0].clientY);
+//   //  let touched = e.touches[0].clientX;
+//   //  let touchChange = p.map(touched,0,window.innerWidth,2,-2);
+
+//   //  let change = touchChange;
+//   //  if (progress + change >= 0 && progress + change <= 100) {
+//   //    progress += change * touchSensitivty;
+//   //  }
+    return false;
+  }
+ 
 }
 
 export default sketch1;
