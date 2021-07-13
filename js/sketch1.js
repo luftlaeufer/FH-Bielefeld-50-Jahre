@@ -27,7 +27,7 @@ const sketch1 = (p) => {
   }
 
   p.windowResized = function () {
-    p.resizeCanvas(setCanvas().x, setCanvas().y);
+    p.resizeCanvas(setCanvas().x, setCanvas().y, p.WEBGL);
   };
 
   p.setup = function () {
@@ -35,7 +35,7 @@ const sketch1 = (p) => {
     // Load the JSON file and store nested content in array
     loadAndParseJSONData();
 
-    p.createCanvas(setCanvas().x, setCanvas().y);
+    p.createCanvas(setCanvas().x, setCanvas().y, p.WEBGL);
     //p.smooth(8);
     //p.frameRate(60);
 
@@ -54,7 +54,7 @@ const sketch1 = (p) => {
   p.preload = function () {
 
     // Initialze GLSL shader
-    //blur = p.loadShader("../assets/shader/blur.vert", "../assets/shader/blur.frag");
+    blur = p.loadShader("../assets/shader/blur.vert", "../assets/shader/blur.frag");
 
     // Load fonts
     boldFont = p.loadFont("../assets/fonts/MaximaNowTBProMedium.otf");
@@ -123,18 +123,18 @@ const sketch1 = (p) => {
       p.remove();
       console.log('destroyed')
     }
-
+    
     p.background('#141414');
-    //p.translate(-p.width / 2, -p.height / 2);
+    p.translate(-p.width / 2, -p.height / 2);
     drawGrid();
-
-
+    
+    
     // Apply the filter pass at/after 60% progress
-/*     if (progress >= 60) {
-      blur.setUniform("blurSize", p.round(p.map(progress, 60, 100, 10, 1000)));
-      blur.setUniform("sigma", p.map(progress, 60, 100, 5, 100));
+    if (progress >= 60) {
+      //blur.setUniform("blurSize", p.int(p.map(progress, 60, 100, 10, 1000)));
+      //blur.setUniform("sigma", p.map(progress, 60, 100, 5, 100));
       p.shader(blur);
-    } */
+    } 
 
     drawText();
     drawProgress();

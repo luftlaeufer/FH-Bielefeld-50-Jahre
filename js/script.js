@@ -6,9 +6,10 @@ import sketch2 from './sketch2.js'
 import sketch3 from './sketch3.js'
 import sketch4 from './sketch4.js'
 import sketch5 from './sketch5.js'
+import sketch6 from './sketch6.js'
 
 /* Die Sketche werden dann für die einfachere Verarbeitung in ein Array gepackt */
-let sketches = [sketch1, sketch2, sketch3, sketch4, sketch5];
+let sketches = [sketch1, sketch2, sketch3, sketch4, sketch5, sketch6];
 
 window.onload = () => {
     const sketchPreview = document.querySelectorAll('.previewSketchImage');
@@ -41,7 +42,7 @@ function openModal(images) {
         image.addEventListener('click', () => {
 
             // enter fullScreen
-            toggleFullScreen(true)
+            //toggleFullScreen(true)
 
             /* start with empty sketch */
             let sketch = null;
@@ -68,7 +69,7 @@ function openModal(images) {
                 sketch.destroySketch = true;
 
                 // exit fullScreen
-                toggleFullScreen(false)
+                //toggleFullScreen(false)
 
             })
         })

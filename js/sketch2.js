@@ -20,14 +20,14 @@ const sketch2 = p => {
   let diversePos = (femalePos + malePos) / 2;    //Relative Y-Position vom Kreis des Diversanteil (Mitte aus Frauenkreis und Männerkreis)
   let fontColor = p.color(255);    //Schriftfarbe vom Overlay
 
-  let ani;    // Variable für den Fortschritt
+  let ani = 0.0;    // Variable für den Fortschritt
   let endOfFirstPhase = lastSetYear - startingYear;
   let endOfSecondPhase = diversePhaseEnd - startingYear;
-  let boarderWidth;
-  let boarderSoft;
+  let boarderWidth = 0.0;
+  let boarderSoft = 0.0;
 
   let data = new p5.Table();    //neue Tabelle die aus dem Datensatz und der generierten Zukunft erstellt wird
-  let pastData;    //vorhandener Datensatz
+  let pastData = new p5.Table();    //vorhandener Datensatz
 
 
 
@@ -59,7 +59,7 @@ const sketch2 = p => {
 
   p.preload = function () {
 
-    //metaballs = p.loadShader("../../assets/shader/blur.vert", "../../assets/shader/Metaballs_CiColor.frag");    //import von shader
+    metaballs = p.loadShader("../../assets/shader/metaballs_vert.vert", "../../assets/shader/Metaballs_CiColor.frag");    //import von shader
     pastData = p.loadTable("../../assets/data/02_GenderData.csv", "csv", "header");    //import von Datensatz
 
     //Import der Fonts
@@ -93,6 +93,8 @@ const sketch2 = p => {
       console.log('destroyed')
     }
 
+    p.translate(-p.width/2, -p.height/2);
+
     animation();  // Jegliche Art von Entwicklungen über den Verlauf der Animation werden hier berechnet. 
     sendDataToShader();   // Senden von Informationen und Daten an den Shader
 
@@ -116,13 +118,13 @@ const sketch2 = p => {
 
   function sendDataToShader() {
     //metaballs.set(a, b) sagt quasi: "Im Shader Metaball bestimme die Variable a und setzte sie mit b gleich. A ist dabei ein zu vegebener Name und b ist der Wert. 
-    // metaballs.setUniform("iResolution", p.float(p.width), p.float(p.height));
-    // metaballs.setUniform("iAni", p.map(ani, 0, 100, 0, 1));
-    // metaballs.setUniform("img", img);
-    // metaballs.setUniform("iBlobCount", genders);
-    // metaballs.setUniform("iBoarderWidth", boarderWidth);
-    // metaballs.setUniform("iMalePos", malePos);
-    // metaballs.setUniform("iFemalePos", femalePos);
+    metaballs.setUniform("iResolution", [p.float(p.width), p.float(p.height)]);
+    metaballs.setUniform("iAni", p.float(p.map(ani, 0, 100, 0, 1)));
+    metaballs.setUniform("img", img);
+    metaballs.setUniform("iBlobCount", genders);
+    metaballs.setUniform("iBoarderWidth", boarderWidth);
+    metaballs.setUniform("iMalePos", malePos);
+    metaballs.setUniform("iFemalePos", femalePos);
   }
 
 
@@ -158,7 +160,8 @@ const sketch2 = p => {
       let thisPrediction = prediction[i];
       data.setNum(years - 1, i, thisPrediction);
     }
-    //p.saveTable(data, 'new.csv');
+ 
+    
 
     // Berechnung der Interpolation zwischen den verschiedenen Phasen
     for (let col = 0; col < genders; col++) {
@@ -198,6 +201,7 @@ const sketch2 = p => {
           data.setNum(row, col, lerpPrediction);
         }
       }
+         
     }
 
     //Image wird aus der oben genertierten Tabelle geschrieben.
@@ -226,39 +230,156 @@ const sketch2 = p => {
     }
   }
 
-  // n_random
-  function n_random(targetSum, numberOfDraws) {
-
-    for (let i = 0; i < prediction.length; i++) {
-      prediction[i] = p.random(1, 40);
-    }
+// Java -> JavaScript new Random()
+// https://gist.github.com/raybellis/4c15a1746724be7bd03964e9d03e0c75
+// https://stackoverflow.com/questions/53165118/javascript-implementation-of-javas-random-class-that-will-generate-same-sequenc
 
 
-    /*     Random r = new Random();
-        prediction = new ArrayList < Integer > ();
-    
-        //random numbers
-        int sum = 0;
-        for (int i = 0; i < numberOfDraws; i++) {
-          int next = r.nextInt(targetSum) + 1;
-          prediction.add(next);
-          sum += next;
-        }
-    
-        //scale to the desired target sum
-        double scale = 1d * targetSum / sum;
-        sum = 0;
-        for (int i = 0; i < numberOfDraws; i++) {
-          prediction.set(i, (int)(prediction.get(i) * scale));
-          sum += prediction.get(i);
-        }
-    
-        //take rounding issues into account
-        while (sum++ < targetSum) {
-          int i = r.nextInt(numberOfDraws);
-          prediction.set(i, prediction.get(i) + 1);
-        } */
+// class UInt48 {
+
+// 	constructor(n) {
+// 		if (n instanceof UInt48) {
+// 			Object.assign(this, n);
+// 		} else if (typeof n === 'number') {
+// 			let w0 = n & 0xffff;
+// 			n /= 0x10000;
+// 			let w1 = n & 0xffff;
+// 			n /= 0x10000;
+// 			let w2 = n & 0xffff;
+// 			Object.assign(this, { w2, w1, w0 });
+// 		}
+// 	}
+
+// 	norm() {
+// 		if (this.w0 >= 0x10000) {
+// 			let carry = Math.floor(this.w0 / 0x10000);
+// 			this.w1 += carry;
+// 			this.w0 &= 0xffff;
+// 		}
+// 		if (this.w1 >= 0x10000) {
+// 			let carry = Math.floor(this.w1 / 0x10000);
+// 			this.w2 += carry;
+// 			this.w1 &= 0xffff;
+// 		}
+// 		this.w2 &= 0xffff;
+
+// 		return this;
+// 	}
+
+// 	add(n) {
+// 		let tmp = new UInt48(this);
+
+// 		tmp.w0 += n.w0;
+// 		tmp.w1 += n.w1;
+// 		tmp.w2 += n.w2;
+
+// 		return tmp.norm();
+// 	}
+
+// 	xor(n) {
+// 		let tmp = new UInt48(this);
+
+// 		tmp.w2 ^= n.w2;
+// 		tmp.w1 ^= n.w1;
+// 		tmp.w0 ^= n.w0;
+
+// 		return tmp;
+// 	}
+
+// 	mul(n) {
+// 		let tmp1 = new UInt48(n);
+// 		tmp1.w2 = tmp1.w2 * this.w0;
+// 		tmp1.w1 = tmp1.w1 * this.w0;
+// 		tmp1.w0 = tmp1.w0 * this.w0;
+// 		tmp1.norm();
+
+// 		let tmp2 = new UInt48(n);
+// 		tmp2.w2 = tmp2.w1 * this.w1;
+// 		tmp2.w1 = tmp2.w0 * this.w1;
+// 		tmp2.w0 = 0;
+// 		tmp2.norm();
+
+// 		let tmp3 = new UInt48(n);
+// 		tmp3.w2 = tmp3.w0 * this.w2;
+// 		tmp3.w1 = 0;
+// 		tmp3.w0 = 0;
+// 		tmp3.norm();
+
+// 		return tmp3.add(tmp2).add(tmp1);
+// 	}
+
+// 	valueOf() {
+// 		return 0x10000 * (0x10000 * this.w2 + this.w1) + this.w0;
+// 	}
+// }
+
+// class Random {
+
+// 	constructor(seed) {
+
+// 		const mul = new UInt48(0x5deece66d);
+// 		const add = new UInt48(0xb);
+
+// 		if (seed === undefined) {
+// 			seed = Math.floor(Math.random() * 0x1000000000000);
+// 		}
+
+// 		this.setSeed = (n) => {
+// 			seed = new UInt48(n).xor(mul);
+// 		}
+
+// 		this.setSeed(seed);
+
+// 		this.next = (bits) => {
+// 			seed = seed.mul(mul).add(add);
+// 			// return ~~(seed / Math.pow(2, 48 - bits));
+// 			return (seed / 0x10000) >> (32 - bits);
+// 		}
+
+// 		this.nextInt = () => this.next(32);
+// 	}
+// };
+
+
+
+// n_random
+
+
+function n_random(targetSum, numberOfDraws) {
+
+  // random numbers, just like new Random() in Java
+  let ra = Array(numberOfDraws).fill().map(() => Math.round(Math.random() * 100))
+  console.log(ra);
+  
+  //random numbers
+  let sum = 0;
+  for (let i = 0; i < numberOfDraws; i++) {
+      //let next = parseInt(ra.slice(i,i+1)) + 1;
+      let next = parseInt(ra.slice(i, i+1)) + 1;
+      prediction[i] = next;
+      sum += next;
   }
+  //console.log(prediction)
+
+  //scale to the desired target sum
+  let scale = targetSum / sum;
+  sum = 0;
+  for (let i = 0; i < numberOfDraws; i++) {
+      prediction[i] = parseInt(prediction.slice(i, i+1) * scale);
+      sum += prediction[i];
+  }
+
+  for (let i = 0; i < targetSum - 1; i++) {
+    let index = parseInt(ra.slice(i, i + 1));
+    prediction[index] = prediction[index] + 1;
+  }
+
+  //take rounding issues into account
+/*   while(sum++ < targetSum) {
+      let i = parseInt(ra.slice(numberOfDraws, numberOfDraws + 1));
+      prediction[i] = prediction[i] + 1;
+  } */
+}
 
   //ANIMATION
   function animation() {
@@ -278,9 +399,9 @@ const sketch2 = p => {
       alpha = p.map(ani, endOfSecondPhase, 100, 255, 0);
     }
     p.fill(fontColor, alpha);
-    console.log(data.getRowCount() + 1);
+    //console.log(data.getRowCount() + 1);
     let row = p.floor(p.map(ani, 0, 100, 0, data.getRowCount() + 1));
-    console.log(row);
+    //console.log(row);
     let femaleSize = p.floor(data.getNum(row, 1));
     let maleSize = p.floor(data.getNum(row, 0));
     let diverseSize = p.floor(data.getNum(row, 2));
@@ -299,7 +420,7 @@ const sketch2 = p => {
       }
       p.fill(fontColor, alpha);
       p.text("Divers", p.width / 2, (1 - diversePos) * p.height);
-      p.text(str(diverseSize) + "%", p.width / 2, (1 - diversePos) * p.height + 16);
+      p.text(p.str(diverseSize) + "%", p.width / 2, (1 - diversePos) * p.height + 16);
     }
   }
 
@@ -346,10 +467,10 @@ const sketch2 = p => {
       lineWidth = p.map(ani, 0, 50, p.width / 2, p.width * 0.07);
       let positionLeft = p.map(ani, 0, 50, p.width * 0.07, p.width / 2);
       p.line(positionLeft, p.height * 0.98, positionLeft + lineWidth - p.width * 0.07, p.height * 0.98);
-      p.text(year, positionLeft, height * 0.972);
+      p.text(year, positionLeft, p.height * 0.972);
     } else {
       lineWidth = p.map(ani, 50, 100, p.width / 2, p.width - p.width * 0.07);
-      p.line(width / 2, p.height * 0.98, lineWidth, p.height * 0.98);
+      p.line(p.width / 2, p.height * 0.98, lineWidth, p.height * 0.98);
       p.text(year, lineWidth, p.height * 0.972);
     }
 
