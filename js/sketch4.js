@@ -150,7 +150,7 @@ const sketch4 = p => {
           p.fill(0);
           p.noStroke();
           p.textSize(45);
-          p.text(Jahr[abschnitt], p.width*0.05, p.height*0.05);
+          p.text(Jahr[abschnitt], p.width*0.03, p.height*0.08);
         }
 
         function zeichneWohnflaeche() {
@@ -258,7 +258,6 @@ const sketch4 = p => {
           p.noStroke();
           p.text("starting salary", p.width*0.71, p.height*0.05);
         
-        
           p.fill('#EBC915');
           p.stroke(0);
           p.ellipse(p.width*0.05, p.height*0.91, 11, 11);
@@ -268,17 +267,17 @@ const sketch4 = p => {
         
           p.fill('#48558A');
           p.stroke(0);
-          p.ellipse(p.width*0.30, p.height*0.91, 11, 11);
+          p.ellipse(p.width*0.33, p.height*0.91, 11, 11);
           p.fill(0);
           p.noStroke();
-          p.text("graphicdesign", p.width*0.33, p.height*0.92);
+          p.text("graphicdesign", p.width*0.37, p.height*0.92);
         
           p.fill('#54398A');
           p.stroke(0);
-          p.ellipse(p.width*0.58, p.height*0.91, 11, 11);
+          p.ellipse(p.width*0.7, p.height*0.91, 11, 11);
           p.fill(0);
           p.noStroke();
-          p.text("architecture", p.width*0.61, p.height*0.92);
+          p.text("architecture", p.width*0.74, p.height*0.92);
         
           p.fill('#A01571');
           p.stroke(0);
@@ -289,17 +288,17 @@ const sketch4 = p => {
         
           p.fill('#A74B0B');
           p.stroke(0);
-          p.ellipse(p.width*0.30, p.height*0.95, 11, 11);
+          p.ellipse(p.width*0.33, p.height*0.95, 11, 11);
           p.fill(0);
           p.noStroke();
-          p.text("engineering", p.width*0.33, p.height*0.96);
+          p.text("engineering", p.width*0.37, p.height*0.96);
         
           p.fill('#33663B');
           p.stroke(0);
-          p.ellipse(p.width*0.58, p.height*0.95, 11, 11);
+          p.ellipse(p.width*0.7, p.height*0.95, 11, 11);
           p.fill(0);
           p.noStroke();
-          p.text("social work", p.width*0.61, p.height*0.96);
+          p.text("social work", p.width*0.74, p.height*0.96);
         }
 
 

@@ -79,8 +79,6 @@ const sketch2 = p => {
 
     //console.log(data);
     img = p.createImage(genders, years); //Das Image für den Shader wird erstellt. Die Pixel in der Y-Achse/Höhe stehen für die Jahre und die X-Achse/Breite steht für ein Geschlecht (Richtet sich also nach der oben eingefügten Variable für Gender)
-
-
     generateFuture();
   }
 
@@ -100,9 +98,9 @@ const sketch2 = p => {
 
     // Der shader wird hier angewendet auf das Rechteck was über die gesamte Größe geht.
     p.fill(255);
-    //p.shader(metaballs);
+    p.shader(metaballs);
     p.rect(0, 0, p.width, p.height);
-    //p.resetShader();
+    p.resetShader();
 
     drawOnShader();   //Alles weitere was noch über den Shader drüber kommt.
 

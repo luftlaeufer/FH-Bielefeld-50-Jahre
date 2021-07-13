@@ -336,11 +336,11 @@ let abschnitt = 0;
   }
   
   
-    let touchSensitivty = 0.1;
+    let touchSensitivty = 0.5;
     p.touchMoved = function(e) {
      //console.log(e.touches[0].clientY);
      let touched = e.touches[0].clientY;
-     let touchChange = p.map(touched,0,window.innerHeight,2,-2);
+     let touchChange = p.map(touched, window.innerHeight/3 ,window.innerHeight * 0.75, 2, -2);
   
      let change = touchChange;
      if (fortschritt + change >= 0 && fortschritt + change <= 100) {
