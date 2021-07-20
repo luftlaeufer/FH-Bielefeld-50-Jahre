@@ -22,7 +22,7 @@ const sketch5 = p => {
 
       p.preload = function () {
         for (let i = 0; i < 256; i++) {
-            images[i] = p.loadImage(`../../assets/images/animation/pp_animation_${i}.jpg`);
+            images[i] = p.loadImage(`../../assets/images/animation/05/05_animation_${i}.jpg`);
         }
       }
 

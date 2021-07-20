@@ -117,12 +117,12 @@ const sketch2 = p => {
   function sendDataToShader() {
     //metaballs.set(a, b) sagt quasi: "Im Shader Metaball bestimme die Variable a und setzte sie mit b gleich. A ist dabei ein zu vegebener Name und b ist der Wert. 
     metaballs.setUniform("iResolution", [p.float(p.width), p.float(p.height)]);
-    metaballs.setUniform("iAni", p.float(p.map(ani, 0, 100, 0, 1)));
+    metaballs.setUniform("iAni", p.float(p.map(ani, 0, 100, 0, 1.0)));
     metaballs.setUniform("img", img);
-    metaballs.setUniform("iBlobCount", genders);
-    metaballs.setUniform("iBoarderWidth", boarderWidth);
-    metaballs.setUniform("iMalePos", malePos);
-    metaballs.setUniform("iFemalePos", femalePos);
+    metaballs.setUniform("iBlobCount", p.int(genders));
+    metaballs.setUniform("iBoarderWidth", p.float(boarderWidth));
+    metaballs.setUniform("iMalePos", p.float(malePos));
+    metaballs.setUniform("iFemalePos", p.float(femalePos));
   }
 
 

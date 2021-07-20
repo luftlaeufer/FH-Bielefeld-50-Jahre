@@ -42,9 +42,9 @@ function openModal(images) {
         image.addEventListener('click', () => {
 
             // enter fullScreen
-/*             if (window.innerWidth <= 500) {
+             if (window.innerWidth <= 500) {
                 toggleFullScreen(true);
-            } */
+            } 
 
             /* start with empty sketch */
             let sketch = null;
@@ -71,9 +71,9 @@ function openModal(images) {
                 sketch.destroySketch = true;
 
                 // exit fullScreen
-/*                 if (window.innerWidth <= 500) {
+                if (window.innerWidth <= 500) {
                     toggleFullScreen(false);
-                } */
+                } 
 
             })
         })
@@ -94,7 +94,7 @@ function toggleFullScreen(fullScreen) {
         requestFullScreen.call(docEl);
       }
     else {
-    cancelFullScreen.call(doc);
+        cancelFullScreen.call(doc);
     }
   }
 

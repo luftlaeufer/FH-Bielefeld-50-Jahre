@@ -14,6 +14,8 @@ const sketch1 = (p) => {
   let italicFont; //font
   let regularFont; //font
 
+  let blur; //Shader
+  let shaderLayer;
   let shaderImages = [];
 
   function setCanvas() {
@@ -35,6 +37,13 @@ const sketch1 = (p) => {
     // Load the JSON file and store nested content in array
     
     p.createCanvas(setCanvas().x, setCanvas().y, p.WEBGL);
+    //p.smooth(8);
+    //p.frameRate(60);
+
+    shaderLayer = p.createGraphics(setCanvas().x, setCanvas().y, p.WEBGL);
+    shaderLayer.translate(-p.width/2,-p.height/2);
+    shaderLayer.shader(blur);
+    shaderLayer.background('#141414')
 
     // Set internal variables
     sketchHeight = p.height * 0.8;
@@ -42,6 +51,8 @@ const sketch1 = (p) => {
 
     p.imageMode(p.CENTER);
     p.rectMode(p.CENTER);
+    shaderLayer.imageMode(p.CENTER);
+    shaderLayer.rectMode(p.CENTER);
 
     // Set a random noise seed so that every animation is truly unique
     p.noiseSeed((p.round(p.random(0, 10000))));
@@ -51,6 +62,9 @@ const sketch1 = (p) => {
   p.preload = function () {
 
     loadAndParseJSONData();
+
+    // Initialze GLSL shader
+    blur = p.loadShader("../assets/shader/blur.vert", "../assets/shader/blur.frag");
 
     // Load fonts
     boldFont = p.loadFont("../assets/fonts/MaximaNowTBProMedium.otf");
@@ -64,7 +78,7 @@ const sketch1 = (p) => {
 
     for (let i = 0; i < 38; i++) {
       shaderImages[i] = p.loadImage(`../assets/images/animation/01/01_animation_${i}.jpg`);
-    }
+  }
 
   }
 
@@ -90,6 +104,7 @@ const sketch1 = (p) => {
         changeData = new Array(years);
         prediction = new Array(dataPointsPerYear).fill(0);
         topics = new Array(dataPointsPerYear);
+
 
         for (let i = 0; i < years; i++) {
           let year = data[i];
@@ -125,15 +140,35 @@ const sketch1 = (p) => {
     }
     
     p.background('#141414');
+
+
     p.translate(-p.width / 2, -p.height / 2);
     drawGrid();
     
     // Apply the filter pass at/after 60% progress
     if (progress >= 60) {
-      let shaderImageIndex = p.int(p.map(progress,60,100,0,shaderImages.length));
-      p.image(shaderImages[shaderImageIndex],p.width/2,p.height/2,p.width,p.height);
-    } 
+    //   p.background('#141414');
+    //       //shaderLayer.background('#1414FF');
+    //  shaderLayer.push();
+    // shaderLayer.fill(20,20,20,16);
+    // shaderLayer.noStroke();
+    // shaderLayer.rect(0,0,p.width,p.height);
+    // shaderLayer.pop(); 
+    // blur.setUniform('tex0', shaderLayer);
+    // let offsetX = p.map(progress, 60, 100, 0, 1);
+    // let offsetY = p.map(progress, 60, 100, 0.001, 0.01);
+    // blur.setUniform('offset', [offsetX, offsetY]);
+    // blur.setUniform('time', p.frameCount * 0.025);
+    // shaderLayer.rect(0,0, p.width,p.height);
+    // p.image(shaderLayer, p.width/2, p.height/2);
+
+    let shaderImageIndex = p.int(p.map(progress,60,100,0,shaderImages.length));
+    p.image(shaderImages[shaderImageIndex],p.width/2,p.height/2,p.width,p.height);
+
+
+  } 
   
+    
     drawText();
     drawProgress();
     drawBottomTimeline();
@@ -223,36 +258,51 @@ const sketch1 = (p) => {
 
         // Set colors
         p.noStroke();
+        shaderLayer.noStroke();
         //p.tint(colors[index]);
         p.fill(colors[index]);
+        shaderLayer.fill(colors[index]);
         
         // Set rotation
         p.push();
+        shaderLayer.push();
         p.translate(position.x, position.y);
+        shaderLayer.translate(position.x, position.y);
         p.rotate(p.radians(rotation));
+        shaderLayer.rotate(p.radians(rotation));
         p.translate(-position.x, -position.y);
+        shaderLayer.translate(-position.x, -position.y);
 
         // Draw arrow
         let arrowSize = p.createVector(gSize.x + addToSize, gSize.y + addToSize);
         p.image(arrows[index], position.x, position.y, arrowSize.x, arrowSize.y);
+        shaderLayer.image(arrows[index], position.x, position.y, arrowSize.x, arrowSize.y);
 
         // As we scroll, we want to hide certain elements to show the progress
         if (indexOfCurrentYear > elementsToDraw) {
           p.image(arrows[8], position.x, position.y, arrowSize.x, arrowSize.y);
+          shaderLayer.image(arrows[8], position.x, position.y, arrowSize.x, arrowSize.y);
         }
 
         // Draw text labels in case of the time-state being between 2021-2031
         if (years == 2) {
           let thisText = topics[index];
           p.push();
+          shaderLayer.push();
           p.fill(colors[index]);
+          shaderLayer.fill(colors[index]);
           p.textFont(boldFont);
+          shaderLayer.textFont(boldFont);
           p.textSize(p.width * 0.02);
+          shaderLayer.textSize(p.width * 0.02);
           p.text(thisText, position.x - gSize.x * 0.2, position.y - gSize.y * 0.16);
+          shaderLayer.text(thisText, position.x - gSize.x * 0.2, position.y - gSize.y * 0.16);
           p.pop();
+          shaderLayer.pop();
         }
 
         p.pop();
+        shaderLayer.pop();
 
         indexOfCurrentYear++;
       }
@@ -274,14 +324,20 @@ const sketch1 = (p) => {
 
           // Set colors
           p.noStroke();
+          shaderLayer.noStroke();
           p.fill(colors[index]);
+          shaderLayer.fill(colors[index]);
 
           // Draw text
           let character = topics[index].charAt(indexOfCurrentYear % topics[index].length);
           p.textAlign(p.CENTER, p.CENTER);
+          shaderLayer.textAlign(p.CENTER, p.CENTER);
           p.textFont(boldFont);
+          shaderLayer.textFont(boldFont);
           p.textSize((gSize.y + addToSize) * 0.5);
+          shaderLayer.textSize((gSize.y + addToSize) * 0.5);
           p.text(character, position.x, position.y);
+          shaderLayer.text(character, position.x, position.y);
 
           indexOfCurrentYear++;
         }

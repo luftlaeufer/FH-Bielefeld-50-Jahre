@@ -21,24 +21,25 @@ const float lineSize = 10000.0;
 float norm;
 vec2 fragCoord;
 
-float scaleFactor = 3;
+float scaleFactor = 3.0;
 float boarder;
 vec4 bgCol = vec4(0.1);
 
-const vec3 colors[] = vec3[](
-vec3(84, 56, 138) / 255.,	//UNDER MALE
-vec3(81, 149, 188) / 255., // MALE
-vec3(99, 169, 68) / 255., // DIVERSE
-vec3(201, 16, 139) / 255., //FEMALE
-vec3(240, 112, 23) / 255.); //OVER FEMALE
+vec3 colors[5];
 
+colors[0] = vec3(84.0, 56, 138);	//UNDER MALE
+colors[1] = vec3(81, 149, 188); // MALE
+colors[2] = vec3(99, 169, 68); // DIVERSE
+colors[3] = vec3(201, 16, 139); //FEMALE
+colors[4] = vec3(240, 112, 23); //OVER FEMALE
 
-//const vec3 colors[] = vec3[](
-//vec3(54,37,89) / 255.,	//UNDER MALE
-//vec3(38,71,89) / 255., // MALE
-//vec3(40, 84, 46) / 255., // DIVERSE
-//vec3(160, 21, 113) / 255., //FEMALE
-//vec3(166, 75, 12) / 255.); //OVER FEMALE
+// const vec3 colors[] = vec3[](
+// vec3(84, 56, 138) / 255.,	//UNDER MALE
+// vec3(81, 149, 188) / 255., // MALE
+// vec3(99, 169, 68) / 255., // DIVERSE
+// vec3(201, 16, 139) / 255., //FEMALE
+// vec3(240, 112, 23) / 255.); //OVER FEMALE
+
 
 
 float map(float value, float min1, float max1, float min2, float max2) {
