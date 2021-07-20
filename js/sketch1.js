@@ -130,8 +130,8 @@ const sketch1 = (p) => {
     
     // Apply the filter pass at/after 60% progress
     if (progress >= 60) {
-      let shaderImageIndex = p.int(p.map(progress,60,100,0,shaderImages.length));
-      p.image(shaderImages[shaderImageIndex],p.width/2,p.height/2,p.width,p.height);
+      let shaderImageIndex = p.int(p.map(progress,60,100,0,shaderImages.length - 1));
+      p.image(shaderImages[shaderImageIndex], p.width/2, p.height/2, p.width, p.height);
     } 
   
     drawText();
