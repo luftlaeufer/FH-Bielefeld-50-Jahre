@@ -60,7 +60,7 @@ const sketch2 = p => {
       console.log('destroyed')
     }
 
-    let imageIndex = p.int(p.map(ani,0,100,0,shaderImages.length));
+    let imageIndex = p.int(p.map(ani,0,100,0,shaderImages.length - 1));
     p.image(shaderImages[imageIndex],0,0,p.width,p.height);
 
     drawProgress();

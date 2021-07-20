@@ -13,7 +13,7 @@ let sketches = [sketch1, sketch2, sketch3, sketch4, sketch5, sketch6];
 
 window.onload = () => {
     const sketchPreview = document.querySelectorAll('.previewSketchImage');
-    popUpImages(sketchPreview);
+    //popUpImages(sketchPreview);
     openModal(sketchPreview);
 }
 
@@ -42,8 +42,8 @@ function openModal(images) {
         image.addEventListener('click', () => {
 
             // enter fullScreen
-             if (window.innerWidth <= 500) {
-                toggleFullScreen(true);
+            if (window.innerWidth <= 500) {
+                //toggleFullScreen(true);
             } 
 
             /* start with empty sketch */
@@ -72,7 +72,7 @@ function openModal(images) {
 
                 // exit fullScreen
                 if (window.innerWidth <= 500) {
-                    toggleFullScreen(false);
+                    //toggleFullScreen(false);
                 } 
 
             })
