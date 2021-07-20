@@ -334,20 +334,6 @@ let abschnitt = 0;
     }
     return false;
   }
-  
-  
-  //   let touchSensitivty = 0.5;
-  //   p.touchMoved = function(e) {
-  //    //console.log(e.touches[0].clientY);
-  //    let touched = e.touches[0].clientY;
-  //    let touchChange = p.map(touched, window.innerHeight/3 ,window.innerHeight * 0.75, 2, -2);
-  
-  //    let change = touchChange;
-  //    if (fortschritt + change >= 0 && fortschritt + change <= 100) {
-  //       fortschritt += change * touchSensitivty;
-  //    }
-  //    return false;
-  //  } 
 
       let touchSensitivty = 1.5;
       let sketchContainer = document.querySelector('.sketchContainer');
@@ -359,15 +345,7 @@ let abschnitt = 0;
         }
       });
       
-      p.touchMoved = function(e) {
-      //    //console.log(e.touches[0].clientY);
-      //   //  let touched = e.touches[0].clientX;
-      //   //  let touchChange = p.map(touched,0,window.innerWidth,2,-2);
-
-      //   //  let change = touchChange;
-      //   //  if (progress + change >= 0 && progress + change <= 100) {
-      //   //    progress += change * touchSensitivty;
-      //   //  }
+      p.touchMoved = function() {
         return false;
       }
 

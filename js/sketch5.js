@@ -77,15 +77,7 @@ const sketch5 = p => {
       }
     });
 
-    p.touchMoved = function(e) {
-    //    //console.log(e.touches[0].clientY);
-    //   //  let touched = e.touches[0].clientX;
-    //   //  let touchChange = p.map(touched,0,window.innerWidth,2,-2);
-
-    //   //  let change = touchChange;
-    //   //  if (progress + change >= 0 && progress + change <= 100) {
-    //   //    progress += change * touchSensitivty;
-    //   //  }
+    p.touchMoved = function() {
       return false;
     }
 

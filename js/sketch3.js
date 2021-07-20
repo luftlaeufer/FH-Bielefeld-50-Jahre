@@ -548,71 +548,44 @@ function drawBottomTimeline() {
 }
 
 // Progress ////////////////////////////////
-function drawProgress() {
-  p.noFill();
-  p.stroke(cT);
-  p.strokeWeight(4);
-  let lineWidth;
+  function drawProgress() {
+    p.noFill();
+    p.stroke(cT);
+    p.strokeWeight(4);
+    let lineWidth;
 
-  if (progress <= 50) {
-    lineWidth = p.map(progress, 0, 50, p.width/2, p.width*0.07);
-    let positionLeft = p.map(progress, 0, 50, p.width*0.07, p.width/2);
-    p.line(positionLeft, p.height*0.98, positionLeft+lineWidth-p.width*0.07, p.height*0.98);
-  } else {
-    lineWidth = p.map(progress, 50, 100, p.width/2, p.width-p.width*0.07);
-    p.line(p.width/2, p.height*0.98, lineWidth, p.height*0.98);
-  }
-}
-
-p.mouseWheel = function (event) {
-  let aenderungDurchMaus = event.delta * mausSensitivitaet;
-  if (progress+aenderungDurchMaus >= 0 && progress+aenderungDurchMaus <= 100) {
-    progress += aenderungDurchMaus;
-  }
-}
-
-
-
-
-let touchSensitivty = 2;
-let sketchContainer = document.querySelector('.sketchContainer');
-const hammertime = new Hammer(sketchContainer);
-  hammertime.on('pan', function(ev) {
-  //console.log(ev);
-  if (progress + ev.overallVelocityY >= 0 && progress + ev.overallVelocityY <= 100) {
-    progress += ev.overallVelocityY * touchSensitivty;
-  }
-});
-
-p.touchMoved = function(e) {
-//    //console.log(e.touches[0].clientY);
-//   //  let touched = e.touches[0].clientX;
-//   //  let touchChange = p.map(touched,0,window.innerWidth,2,-2);
-
-//   //  let change = touchChange;
-//   //  if (progress + change >= 0 && progress + change <= 100) {
-//   //    progress += change * touchSensitivty;
-//   //  }
-  return false;
-}
-
-
-
-  /*   p.mouseWheel = function (e) {
-      rotation += p.map(e.delta, -100, 100, -5, 5);
-      return false;
+    if (progress <= 50) {
+      lineWidth = p.map(progress, 0, 50, p.width/2, p.width*0.07);
+      let positionLeft = p.map(progress, 0, 50, p.width*0.07, p.width/2);
+      p.line(positionLeft, p.height*0.98, positionLeft+lineWidth-p.width*0.07, p.height*0.98);
+    } else {
+      lineWidth = p.map(progress, 50, 100, p.width/2, p.width-p.width*0.07);
+      p.line(p.width/2, p.height*0.98, lineWidth, p.height*0.98);
     }
-  
-    p.touchMoved = function (e) {
-      console.log(e.touches[0].clientY);
-      let touched = e.touches[0].clientY;
-      rotation += p.map(touched, 0, window.innerHeight, -5, 5);
-      return false;
-    } */
+  }
+
+  p.mouseWheel = function (event) {
+    let aenderungDurchMaus = event.delta * mausSensitivitaet;
+    if (progress+aenderungDurchMaus >= 0 && progress+aenderungDurchMaus <= 100) {
+      progress += aenderungDurchMaus;
+    }
+  }
 
 
 
+  let touchSensitivty = 2;
+  let sketchContainer = document.querySelector('.sketchContainer');
+  const hammertime = new Hammer(sketchContainer);
+    hammertime.on('pan', function(ev) {
+    //console.log(ev);
+    if (progress + ev.overallVelocityY >= 0 && progress + ev.overallVelocityY <= 100) {
+      progress += ev.overallVelocityY * touchSensitivty;
+    }
+  });
 
+  p.touchMoved = function() {
+    return false;
+  }
 };
 
 export default sketch3;

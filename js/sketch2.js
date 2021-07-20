@@ -144,6 +144,22 @@ const sketch2 = p => {
     }
     return false;
   }
+
+  let touchSensitivty = 1.5;
+  let sketchContainer = document.querySelector('.sketchContainer');
+  const hammertime = new Hammer(sketchContainer);
+    hammertime.on('pan', function(ev) {
+	  //console.log(ev);
+    if (ani + ev.overallVelocityY >= 0 && ani + ev.overallVelocityY <= 100) {
+      ani += ev.overallVelocityY * touchSensitivty;
+    }
+  });
+
+  p.touchMoved = function() {
+    return false;
+  }
+
+
 };
 
 export default sketch2;
