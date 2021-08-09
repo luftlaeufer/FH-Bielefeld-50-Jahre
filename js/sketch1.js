@@ -248,7 +248,9 @@ const sketch1 = (p) => {
           p.fill(colors[index]);
           p.textFont(boldFont);
           p.textSize(p.width * 0.02);
-          p.text(thisText, position.x - gSize.x * 0.2, position.y - gSize.y * 0.16);
+          if (progress <= 60) {
+            p.text(thisText, position.x - gSize.x * 0.2, position.y - gSize.y * 0.16);
+          }
           p.pop();
         }
 

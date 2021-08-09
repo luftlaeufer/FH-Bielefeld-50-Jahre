@@ -12,6 +12,14 @@ import sketch6 from './sketch6.js'
 let sketches = [sketch1, sketch2, sketch3, sketch4, sketch5, sketch6];
 
 window.onload = () => {
+
+    // scroll to last position, because the page reloads, when sketch is closed
+    if (localStorage.getItem("scrollHeight") !== null) {
+        let scrollPosition = localStorage.getItem("scrollHeight");
+        let rightSide = document.querySelector('.rightSide');
+        rightSide.scroll(0, scrollPosition);
+    }
+
     const sketchPreview = document.querySelectorAll('.previewSketchImage');
     //popUpImages(sketchPreview);
     openModal(sketchPreview);
@@ -44,7 +52,11 @@ function openModal(images) {
             // enter fullScreen
             if (window.innerWidth <= 500) {
                 //toggleFullScreen(true);
-            } 
+            }
+
+            // save scroll position, when page refreshes to scroll to the correct sketch
+            let scrollPosition = rightSide.scrollTop;
+            localStorage.setItem('scrollHeight', scrollPosition);
 
             /* start with empty sketch */
             let sketch = null;
@@ -63,12 +75,13 @@ function openModal(images) {
 
             /* close modal */
             modal.addEventListener('click', () => {
+                /* destroy sketch in p5 */
+                sketch.destroySketch = true;
+                document.location.reload();
                 modal.classList.remove('modal__open');
                 leftSide.classList.remove('blur');
                 rightSide.classList.remove('blur');
 
-                /* destroy sketch in p5 */
-                sketch.destroySketch = true;
 
                 // exit fullScreen
                 if (window.innerWidth <= 500) {

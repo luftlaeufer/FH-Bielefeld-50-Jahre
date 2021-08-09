@@ -21,7 +21,7 @@ const sketch5 = p => {
       };
 
       p.preload = function () {
-        for (let i = 0; i < 256; i++) {
+        for (let i = 0; i < 108; i++) {
             images[i] = p.loadImage(`../../assets/images/animation/05/05_animation_${i}.jpg`);
         }
       }
@@ -33,6 +33,8 @@ const sketch5 = p => {
       p.draw = function () {
 
         if (p.destroySketch == true) {
+          p.width = 0;
+          p.height = 0;
           p.remove();
           console.log('destroyed')
         }

@@ -38,7 +38,7 @@ const sketch2 = p => {
     subheaderFont = p.loadFont("../../assets/fonts/MaximaNowTBProMedium.otf"); // 26
     copyFont = p.loadFont("../../assets/fonts/MaximaNowTBProRegular.otf"); //16
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 99; i++) {
       shaderImages[i] = p.loadImage(`../assets/images/animation/02/02_animation_${i}.jpg`);
     }
   }
@@ -56,8 +56,10 @@ const sketch2 = p => {
     p.background(25);
 
     if (p.destroySketch == true) {
+      p.width = 0;
+      p.height = 0;
       p.remove();
-      console.log('destroyed')
+      console.log('destroyed');
     }
 
     let imageIndex = p.int(p.map(ani,0,100,0,shaderImages.length - 1));

@@ -157,7 +157,7 @@ let abschnitt = 0;
         p.strokeWeight(7);
         p.stroke(colors[5] + 'FF');
         p.textFont(Maxima);
-        p.textSize(32);
+        p.textSize(p.int(p.height / 60));
     
         // bis zur häfte der Daten eine ganze linie
         for (let i = 0; i < p.int(jahr.length/2); i++) {
@@ -167,8 +167,10 @@ let abschnitt = 0;
         // damit der Text und die Prozentzahl nur an einer Stelle sind
         if (abschnitt == i) {
             p.fill(colors[5]);
-            p.rect(p.map(jahr[i+1], 1990, 2050, 0, p.width)-25, p.map(prozent[i+1], 0, 100, heightF, 0)-30, 60, -30);
+            let graphText = 
+            p.rect(p.map(jahr[i+1], 1990, 2050, 0, p.width)-25, p.map(prozent[i+1], 0, 100, heightF, 0)-30, 30, -30);
             p.fill(colors[1]);
+            p.noStroke();
             p.text(p.int(prozent[i]), p.map(jahr[i+1], 1990, 2050, 0, p.width)-20, p.map(prozent[i+1], 0, 100, heightF, 0)-35);
         }
         }
@@ -185,8 +187,9 @@ let abschnitt = 0;
             // damit der Text und die Prozentzahl nur an einer Stelle sind
             if (abschnitt == i) {
                 p.fill(colors[5]);
-                p.rect(p.map(jahr[i+1], 1990, 2050, 0, p.width)-25, p.map(prozent[i+1], 0, 100, heightF, 0)-30, 60, -30);
+                p.rect(p.map(jahr[i+1], 1990, 2050, 0, p.width)-25, p.map(prozent[i+1], 0, 100, heightF, 0)-30, 30, -30);
                 p.fill(colors[1]);
+                p.noStroke();
                 p.text(p.int(prozent[i]), p.map(jahr[i+1], 1990, 2050, 0, p.width)-20, p.map(prozent[i+1], 0, 100, heightF, 0)-35);
             }
         }
@@ -270,13 +273,13 @@ let abschnitt = 0;
                 p.push();  
                 p.noStroke();
                 p.textFont(Maxima);
-                p.textSize(17);
+                p.textSize(p.int(p.height / 80 ));
                 p.translate(posX, posY);
                 p.fill(colors[5]);
                 p.ellipse(0, 0, 10, 10);
                 p.rotate(p.radians(45));
                 p.fill(colors[1] + '82');
-                p.text(gridY+gridX+10 + ":" + 0 + 0, 10, 0);
+                p.text(gridY+gridX+10 + ":" + 0 + 0, 10, 3);
                 p.pop();
             }
         }
