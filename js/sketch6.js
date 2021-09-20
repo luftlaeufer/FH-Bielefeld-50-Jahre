@@ -89,6 +89,7 @@ let abschnitt = 0;
     p.draw = function () {
   
       if (p.destroySketch == true) {
+        p.resizeCanvas(1,1, p.WEBGL);
         p.remove();
         console.log('destroyed')
       }

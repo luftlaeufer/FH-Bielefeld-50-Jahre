@@ -120,6 +120,7 @@ const sketch1 = (p) => {
   p.draw = function () {
 
     if (p.destroySketch == true) {
+      p.resizeCanvas(1,1, p.WEBGL);
       p.remove();
       console.log('destroyed')
     }

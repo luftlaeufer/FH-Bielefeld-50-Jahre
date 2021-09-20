@@ -33,8 +33,7 @@ const sketch5 = p => {
       p.draw = function () {
 
         if (p.destroySketch == true) {
-          p.width = 0;
-          p.height = 0;
+          p.resizeCanvas(1,1, p.WEBGL);
           p.remove();
           console.log('destroyed')
         }
