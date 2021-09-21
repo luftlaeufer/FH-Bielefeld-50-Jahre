@@ -119,6 +119,7 @@ const sketch1 = (p) => {
 
   p.draw = function () {
 
+
     if (p.destroySketch == true) {
       p.canvas.width = 1;
       p.canvas.height = 1;

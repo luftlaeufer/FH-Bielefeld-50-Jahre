@@ -8,6 +8,10 @@ import sketch4 from './sketch4.js'
 import sketch5 from './sketch5.js'
 import sketch6 from './sketch6.js'
 
+import sketch1_new from './sketch1_new.js'
+import sketch2_new from './sketch2_new.js'
+import sketch5_new from './sketch5_new.js'
+
 /* Die Sketche werden dann für die einfachere Verarbeitung in ein Array gepackt */
 let sketches = [sketch1, sketch2, sketch3, sketch4, sketch5, sketch6];
 
@@ -71,12 +75,29 @@ function openModal(images) {
 
             /* connect sketch with DIV and invoke p5 sketch */
             sketchContainer.id = sketchID;
-            sketch = new p5(sketches[index], sketchID); // invoke p5
+            
+            if (sketchID == 'sketch3' || sketchID == 'sketch4' || sketchID == 'sketch6') {
+                sketch = new p5(sketches[index], sketchID); // invoke p5
+            }
 
+            switch(sketchID) {
+                case 'sketch1':
+                    sketch1_new();
+                    break;
+                case 'sketch2':
+                    sketch2_new();
+                    break;
+                case 'sketch5':
+                    sketch5_new();
+                    break;
+            }
+            
             /* close modal */
             modal.addEventListener('click', () => {
                 /* destroy sketch in p5 */
-                sketch.destroySketch = true;
+                if (sketchID == 'sketch3' || sketchID == 'sketch4' || sketchID == 'sketch6') {
+                    sketch.destroySketch = true;
+                }
                 document.location.reload();
                 modal.classList.remove('modal__open');
                 leftSide.classList.remove('blur');
