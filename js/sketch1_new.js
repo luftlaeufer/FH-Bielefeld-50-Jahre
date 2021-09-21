@@ -38,7 +38,7 @@ const sketch1_new = (p) => {
     }
     
     let mouseWheel = function () {
-        window.addEventListener('mousewheel', function (e) {
+        window.addEventListener('wheel', function (e) {
             //e.preventDefault(); // No scroll
     
             // The following equation will return either a 1 for scroll down

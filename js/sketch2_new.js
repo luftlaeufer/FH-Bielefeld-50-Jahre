@@ -36,9 +36,9 @@ const sketch2_new = (p) => {
     }
     
     let mouseWheel = function () {
-        window.addEventListener('mousewheel', function (e) {
+        window.addEventListener('wheel', function (e) {
             //e.preventDefault(); // No scroll
-    
+
             // The following equation will return either a 1 for scroll down
             // or -1 for a scroll up
             let delta = Math.max(-1, Math.min(1, e.wheelDelta));
@@ -53,6 +53,7 @@ const sketch2_new = (p) => {
             // See below for the details of this function
             setImage(currentLocation);
         });
+
     }
 
     let touchSensitivty = 1.1;
